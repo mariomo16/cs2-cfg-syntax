@@ -1,0 +1,38 @@
+# CS2 Config Highlighter
+
+This extension adds color-coded clarity to `.cfg` files, making it easy to edit and optimize your game settings, ensuring your configs are both accurate and visually intuitive.
+
+## Features
+
+> Diferrences with my own cfg file
+> ![extensionOff](./images/codeOff.png)
+> ![extensionOn](./images/codeOn.png)
+
+-   **Vivid Syntax Highlighting:** Instantly differentiate CS2-specific commands (e.g., `sensitivity`, `bind`) with distinct colors for seamless config editing.
+-   **Value Clarity:** Clearly distinguish strings, numeric/boolean values, and IP addresses (used in `connect` commands).
+-   **Source 2 Engine Support:** Tailored for CS2’s `.cfg` format, ensuring accurate highlighting for autoexec and custom config files.
+-   **Error Reduction:** Visual cues highlight commands and values, helping prevent syntax mistakes that could stop your cfg from running correctly.
+
+## Setup
+
+The extension should activate automatically. If it doesn’t, follow these steps:
+
+-   Open a `.cfg` file
+-   Click the bottom-right corner to change the **File Association** _(or press `Ctrl+K, Ctrl+M`)_
+-   Select: **Configure CS2 Config language based settings…**
+
+Or open your user settings (`Ctrl+,`) and add the configuration manually:
+![](./images/settings.png)
+
+### Known Issues
+
+-   Not all [commands](https://developer.valvesoftware.com/wiki/List_of_Counter-Strike_2_console_commands_and_variables) are included yet.
+-   The regex patterns have not been thoroughly reviewed; there may be more efficient approaches.
+
+## Release Notes
+
+### 0.1.0
+
+Initial release of Counter-Strike 2 config (`.cfg`) syntax highlighting.
+
+-   Support for Source 2 Engine Syntax: near-complete compatibility with CS2's updated config format

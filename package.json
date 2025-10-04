@@ -1,0 +1,36 @@
+{
+    "name": "mariomorales.cs2-cfg-syntax",
+    "displayName": "CS2 Config Highlighter",
+    "description": "Syntax highlighting for CS2 config files.",
+    "publisher": "Mario Morales Ortega",
+    "icon": "images/cs2-logo.png",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.104.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "cs2-cfg",
+                "aliases": [
+                    "CS2 Config",
+                    "cs2-cfg"
+                ],
+                "extensions": [
+                    ".cfg"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "cs2-cfg",
+                "scopeName": "source.cs2-cfg",
+                "path": "./syntaxes/cs2-cfg.tmLanguage.json"
+            }
+        ]
+    }
+}
