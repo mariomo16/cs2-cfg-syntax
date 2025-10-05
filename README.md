@@ -5,8 +5,7 @@ This extension adds color-coded clarity to `.cfg` files, making it easy to edit 
 ## Features
 
 > Diferrences with my own cfg file
-> ![extensionOff](./images/codeOff.png)
-> ![extensionOn](./images/codeOn.png)
+> ![extensionOff](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOff.png) ![extensionOn](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOn.png)
 
 -   **Vivid Syntax Highlighting:** Instantly differentiate CS2-specific commands (e.g., `sensitivity`, `bind`) with distinct colors for seamless config editing.
 -   **Value Clarity:** Clearly distinguish strings, numeric/boolean values, and IP addresses (used in `connect` commands).
@@ -22,7 +21,7 @@ The extension should activate automatically. If it doesn’t, follow these steps
 -   Select: **Configure CS2 Config language based settings…**
 
 Or open your user settings (`Ctrl+,`) and add the configuration manually:
-![](./images/settings.png)
+![](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/settings.png)
 
 ### Known Issues
 
