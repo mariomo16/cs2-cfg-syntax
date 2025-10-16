@@ -4,7 +4,7 @@ This extension adds color-coded clarity to `.cfg` files, making it easy to edit 
 
 ## Features
 
-> Diferrences with my own cfg file
+> Differences shown in my own cfg file (using CS2 Config Highlighter v0.1.0) with [Andromeda](https://marketplace.visualstudio.com/items?itemName=EliverLara.andromeda)
 > ![extensionOff](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOff.png) ![extensionOn](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOn.png)
 
 -   **Vivid Syntax Highlighting:** Instantly differentiate CS2-specific commands (e.g., `sensitivity`, `bind`) with distinct colors for seamless config editing.
@@ -30,8 +30,14 @@ Or open your user settings (`Ctrl+,`) and add the configuration manually:
 
 ## Release Notes
 
-### 0.1.0
+### 0.2.0
 
-Initial release of Counter-Strike 2 config (`.cfg`) syntax highlighting.
+Second release with improvements and optimizations for CS2 config (`.cfg`) syntax highlighting.
 
--   Support for Source 2 Engine Syntax: near-complete compatibility with CS2's updated config format
+-   Improved comment highlighting with cleaner scope naming (`comment.line`).
+-   Commands and binds now use more precise scope (`keyword.other`) for better semantic coloring.
+-   Strings now correctly handle end-of-line comments and include command/value highlighting inside quotes.
+-   Added syntax highlighting for command delimiters (`;` and `|`) inside strings.
+-   IP addresses and domain names now have distinct highlighting (`variable.other`) to separate them from numeric values.
+-   Numeric and boolean values now have improved detection and consistent highlighting.
+-   Overall grammar is cleaner, more maintainable, and more consistent with VSCode/TextMate conventions.

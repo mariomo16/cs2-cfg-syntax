@@ -13,13 +13,16 @@
         },
         {
             "include": "#values"
+        },
+        {
+            "include": "#punctuation"
         }
     ],
     "repository": {
         "comments": {
             "patterns": [
                 {
-                    "name": "comment.line.double-slash.cs2-cfg",
+                    "name": "comment.line.cs2-cfg",
                     "match": "//.*$"
                 }
             ]
@@ -27,11 +30,11 @@
         "commands": {
             "patterns": [
                 {
-                    "name": "keyword.cs2-cfg",
+                    "name": "keyword.other.cs2-cfg",
                     "match": "\\+(?:attack|attack2|back|duck|forward|jump|left|lookatweapon|reload|right|showscores|spray_menu|sprint|use|voicerecord)\\b"
                 },
                 {
-                    "name": "keyword.cs2-cfg",
+                    "name": "keyword.other.cs2-cfg",
                     "match": "\\b(?:adsp|ai|alias|ammo|anim|animevents|animgraph|autobuy|axis|battery|benchframe|bind|binddefaults|bindss|bot|budget|buy|c_|callvote|cam|cast|cc|centerview|chat|cl_|clear|clientport|closecaption|connect|clutch|cmd|con_enable|con_log|con_notify|convar|cpu|cs_|csm|cstrike|cvar|demo|developer|dev|disconnect|dota|drop|dsp|echo|editor|endround|engine|ent|eom|exec|exit|ff_|find|fog|fps|func_|g_|game|gl_|gpu|graph|help|host|hud|impulse|incrementvar|info|install|invnext|jointeam|joy|jpeg|key_find|key_list|kick|kill|lastinv|load|log|lobby|map|mat|menu|memory|mm_|mod|model|mouse|mp_|muzzleflash|name|navspace|nav_|net_|noclip|notarget|npc|option|overlay|panorama|particle|pause|perf|phoneme|phys_|ping|play|plugin|print|prop_|quit|r_|radio|rate|record|remove|reset|retry|room_|rope_|rpt|run|safezoney|safezonex|save|say|sc_|screenshot|script|sellbackall|sensitivity|server|setinfo|shake|showtriggers|show_|singlestep|sk_|slot|snd_|sound|soundscape|spec_|spike|startmovie|status|stop|subclass|sv_|sys_|switchhands|take|task|teammenu|teleport|test|thirdperson|timedemo|toggle|tr_|tv_|ui_|unbind|unbindall|user|util|v_|vcollide|vgui|violence|view|voice_|volume|vr_|vs_|weapon_|win_|writecfg|x_|zoom)[_a-zA-Z0-9]*\\b"
                 }
             ]
@@ -41,31 +44,17 @@
                 {
                     "name": "string.quoted.double.cs2-cfg",
                     "begin": "\"",
-                    "end": "\"(?=\\s|$)",
+                    "end": "\"(?=\\s|$|//)",
                     "patterns": [
                         {
-                            "name": "keyword.cs2-cfg",
-                            "match": "\\+(?:attack|attack2|back|duck|forward|jump|left|lookatweapon|reload|right|showscores|spray_menu|sprint|use|voicerecord)\\b"
+                            "include": "#commands"
                         },
                         {
-                            "name": "keyword.cs2-cfg",
-                            "match": "\\b(?:adsp|ai|alias|ammo|anim|animevents|animgraph|autobuy|axis|battery|benchframe|bind|binddefaults|bindss|bot|budget|buy|c_|callvote|cam|cast|cc|centerview|chat|cl_|clear|clientport|closecaption|connect|clutch|cmd|con_enable|con_log|con_notify|convar|cpu|cs_|csm|cstrike|cvar|demo|developer|dev|disconnect|dota|drop|dsp|echo|editor|endround|engine|ent|eom|exec|exit|ff_|find|fog|fps|func_|g_|game|gl_|gpu|graph|help|host|hud|impulse|incrementvar|info|install|invnext|jointeam|joy|jpeg|key_find|key_list|kick|kill|lastinv|load|log|lobby|map|mat|menu|memory|mm_|mod|model|mouse|mp_|muzzleflash|name|navspace|nav_|net_|noclip|notarget|npc|option|overlay|panorama|particle|pause|perf|phoneme|phys_|ping|play|plugin|print|prop_|quit|r_|radio|rate|record|remove|reset|retry|room_|rope_|rpt|run|safezoney|safezonex|save|say|sc_|screenshot|script|sellbackall|sensitivity|server|setinfo|shake|showtriggers|show_|singlestep|sk_|slot|snd_|sound|soundscape|spec_|spike|startmovie|status|stop|subclass|sv_|sys_|switchhands|take|task|teammenu|teleport|test|thirdperson|timedemo|toggle|tr_|tv_|ui_|unbind|unbindall|user|util|v_|vcollide|vgui|violence|view|voice_|volume|vr_|vs_|weapon_|win_|writecfg|x_|zoom)[_a-zA-Z0-9]*\\b"
+                            "include": "#values"
                         },
                         {
-                            "name": "entity.name.tag.cs2-cfg",
-                            "match": "\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?::[0-9]{1,5})?\\b"
-                        },
-                        {
-                            "name": "entity.name.tag.cs2-cfg",
-                            "match": "\\b([a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z]{2,}(:[0-9]{1,5})?\\b"
-                        },
-                        {
-                            "name": "constant.numeric.cs2-cfg",
-                            "match": "(?<=\\s|\"|\\||\\.|\\+|\\-)[+-]?[0-9]+(?:\\.[0-9]+)?(?=\\s|$|\"|\\b)"
-                        },
-                        {
-                            "name": "constant.language.boolean.cs2-cfg",
-                            "match": "\\b(?:true|false)\\b"
+                            "name": "punctuation.separator.cs2-cfg",
+                            "match": "[;|]"
                         }
                     ]
                 }
@@ -74,19 +63,19 @@
         "values": {
             "patterns": [
                 {
-                    "name": "variable.name.cs2-cfg",
-                    "match": "\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?::[0-9]{1,5})?\\b"
+                    "name": "variable.other.cs2-cfg",
+                    "match": "\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?):270[0-9]{2}\\b"
                 },
                 {
-                    "name": "variable.name.cs2-cfg",
-                    "match": "\\b([a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z]{2,}(:[0-9]{1,5})?\\b"
+                    "name": "variable.other.cs2-cfg",
+                    "match": "\\b([a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z]{2,63}:270[0-9]{2}\\b"
                 },
                 {
                     "name": "constant.numeric.cs2-cfg",
-                    "match": "(?<=\\s|\"|\\||\\.|\\+|\\-)[+-]?[0-9]+(?:\\.[0-9]+)?(?=\\s|$|\"|\\b)"
+                    "match": "(?<=[\\s\"|.+-])[+-]?\\d+(\\.\\d+)?(?=\\b|\"|$)"
                 },
                 {
-                    "name": "constant.language.boolean.cs2-cfg",
+                    "name": "constant.language.cs2-cfg",
                     "match": "\\b(?:true|false)\\b"
                 }
             ]
