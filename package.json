@@ -4,7 +4,7 @@
     "description": "Provides syntax highlighting and color cues for CS2 config (.cfg) files.",
     "publisher": "mario-morales-ortega",
     "icon": "images/cs2-logo.png",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "engines": {
         "vscode": "^1.104.0"
     },

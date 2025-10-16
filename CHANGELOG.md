@@ -4,6 +4,19 @@ All notable changes to the "cs2-cfg-syntax" extension will be documented in this
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.0] - 2025-10-16
+
+### Added
+
+-   Highlighting of `.` and `:` separators in **valid IPv4 addresses** with ports 27000–27099.
+-   Highlighting of `.` and `:` separators in **valid domain names** with ports 27000–27099.
+-   Invalid highlighting for **IPv4** with incorrect format or ports outside 27000–27099.
+-   Invalid highlighting for **domain names** with incorrect or out-of-range ports.
+
+### Changed
+
+-   Updated regex patterns for valid IPs and domain names to capture separators `. `and `:`.
+
 ## [0.2.0] - 2025-10-16
 
 ### Added

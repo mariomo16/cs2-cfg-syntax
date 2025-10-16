@@ -30,14 +30,12 @@ Or open your user settings (`Ctrl+,`) and add the configuration manually:
 
 ## Release Notes
 
-### 0.2.0
+### 0.3.0
 
-Second release with improvements and optimizations for CS2 config (`.cfg`) syntax highlighting.
+Third release with enhanced network value highlighting for CS2 config (`.cfg`) syntax.
 
--   Improved comment highlighting with cleaner scope naming (`comment.line`).
--   Commands and binds now use more precise scope (`keyword.other`) for better semantic coloring.
--   Strings now correctly handle end-of-line comments and include command/value highlighting inside quotes.
--   Added syntax highlighting for command delimiters (`;` and `|`) inside strings.
--   IP addresses and domain names now have distinct highlighting (`variable.other`) to separate them from numeric values.
--   Numeric and boolean values now have improved detection and consistent highlighting.
--   Overall grammar is cleaner, more maintainable, and more consistent with VSCode/TextMate conventions.
+-   Added highlighting for `.` and `:` separators in valid **IPv4 addresses** with ports 27000–27099.
+-   Added highlighting for `.` and `:` separators in valid **domain names** with ports 27000–27099.
+-   Added invalid highlighting for **IPv4 addresses** with incorrect format or out-of-range ports.
+-   Added invalid highlighting for **domain names** with incorrect format or out-of-range ports.
+-   Updated regex patterns for valid IPs and domain names to properly capture separators without affecting invalid values.
