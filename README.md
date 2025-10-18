@@ -1,15 +1,14 @@
 # CS2 Config Highlighter
 
-This extension adds color-coded clarity to `.cfg` files, making it easy to edit and optimize your game settings, ensuring your configs are both accurate and visually intuitive.
+Makes .cfg files clear and visually organized with color-coded syntax highlighting for easy editing.
 
 ## Features
 
-> Differences shown in my own cfg file (using CS2 Config Highlighter v0.3.0) with [Catppuccin for VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc) > ![extensionOff](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOff.png) ![extensionOn](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOn.png)
+| Extension Off                                                                                                  | Extension On                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| ![extensionOff](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOff.png) | ![extensionOn](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOn.png) |
 
--   **Vivid Syntax Highlighting:** Instantly differentiate CS2-specific commands (e.g., `sensitivity`, `bind`) with distinct colors for seamless config editing.
--   **Value Clarity:** Clearly distinguish strings, numeric/boolean values, and IP addresses (used in `connect` commands).
--   **Source 2 Engine Support:** Tailored for CS2’s `.cfg` format, ensuring accurate highlighting for autoexec and custom config files.
--   **Error Reduction:** Visual cues highlight commands and values, helping prevent syntax mistakes that could stop your cfg from running correctly.
+Differences shown in my own cfg file (using CS2 Config Highlighter v0.3.0) with [Catppuccin](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
 
 ## Setup
 

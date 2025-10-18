@@ -1,41 +1,41 @@
 {
-    "name": "cs2-cfg-syntax",
-    "displayName": "CS2 Config Highlighter",
-    "description": "Provides syntax highlighting and color cues for CS2 config (.cfg) files.",
-    "publisher": "mario-morales-ortega",
-    "icon": "images/icon.bmp",
-    "version": "0.3.1",
-    "engines": {
-        "vscode": "^1.104.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "cs2-cfg",
-                "aliases": [
-                    "CS2 Config",
-                    "cs2-cfg"
-                ],
-                "extensions": [
-                    ".cfg"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "cs2-cfg",
-                "scopeName": "source.cs2-cfg",
-                "path": "./syntaxes/cs2-cfg.tmLanguage.json"
-            }
-        ]
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/mariomo16/cs2-cfg-syntax"
-    },
-    "license": "MIT"
+	"name": "cs2-cfg-syntax",
+	"displayName": "CS2 Config Highlighter",
+	"description": "Color-coded syntax for .cfg files — read and edit with ease.",
+	"publisher": "mario-morales-ortega",
+	"icon": "images/icon.bmp",
+	"version": "0.3.1",
+	"engines": {
+		"vscode": "^1.104.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "cs2-cfg",
+				"aliases": [
+					"CS2 Config",
+					"cs2-cfg"
+				],
+				"extensions": [
+					".cfg"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "cs2-cfg",
+				"scopeName": "source.cs2-cfg",
+				"path": "./syntaxes/cs2-cfg.tmLanguage.json"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mariomo16/cs2-cfg-syntax"
+	},
+	"license": "MIT"
 }
