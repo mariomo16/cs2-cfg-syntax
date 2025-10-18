@@ -1,6 +1,6 @@
 # CS2 Config Highlighter
 
-Makes .cfg files clear and visually organized with color-coded syntax highlighting for easy editing.
+Makes `.cfg` files clear and visually organized with color-coded syntax highlighting for easy editing.
 
 ## Features
 
@@ -19,7 +19,8 @@ The extension should activate automatically. If it doesn’t, follow these steps
 -   Select: **Configure File Association for '.cfg'...** and search `CS2 Config`
 
 Or open your user settings (`Ctrl+,`) and add the configuration manually:
-![](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/settings.png)
+
+<img src="https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/settings.png" alt="Alt Text" style="width:50%; height:auto;">
 
 ### Known Issues
 
