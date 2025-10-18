@@ -4,7 +4,23 @@ All notable changes to the "cs2-cfg-syntax" extension will be documented in this
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [0.3.0] - 2025-10-16
+## [0.3.1] - 2025-10-18
+
+### Changed
+
+-   Moved IPv4 addresses and hostnames from `#values` to a dedicated `#network` repository for clearer separation.
+-   Created `#separators` repository for `;` and `|` punctuation, previously only defined inside strings.
+-   Included `#network` and `#separators` inside string patterns for consistent highlighting.
+-   Removed `invalid` scopes for malformed IPv4 addresses, hostnames, or ports; such values now appear as normal strings.
+-   Updated numeric regex to accept values like `.8` as valid numbers, reflecting CS2 behavior.
+-   Renamed comment scope from `comment.line.cs2-cfg` → `comment.line.double-slash.cs2-cfg`.
+-   Refactored repository structure for better maintainability.
+
+### Fixed
+
+-   Prevented accidental numeric highlighting of malformed network values.
+
+## [0.3.0] - 2025-10-17
 
 ### Added
 
