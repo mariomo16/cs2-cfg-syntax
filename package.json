@@ -3,8 +3,8 @@
 	"displayName": "CS2 Config Highlighter",
 	"description": "Color-coded syntax for .cfg files — read and edit with ease.",
 	"publisher": "mario-morales-ortega",
-	"icon": "images/icon.bmp",
-	"version": "0.3.1",
+	"icon": "./icon.bmp",
+	"version": "0.3.2",
 	"engines": {
 		"vscode": "^1.104.0"
 	},

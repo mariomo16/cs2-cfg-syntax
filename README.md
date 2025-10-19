@@ -30,14 +30,11 @@ Or open your user settings (`Ctrl+,`) and add the configuration manually:
 
 ## Release Notes
 
-### 0.3.1
+### 0.3.2
 
-Patch release with internal refactoring and improvements for CS2 config (`.cfg`) syntax highlighting.
+Patch release with improved string and IPv4 parsing for CS2 config (`.cfg`) syntax highlighting.
 
--   Moved IPv4 addresses and hostnames to a dedicated `#network` repository for clearer separation from general numeric values.
--   Created `#separators` repository for `;` and `|` punctuation, previously only defined inside strings, now included in strings for consistent highlighting.
--   Removed `invalid` scopes for malformed IPv4 addresses, hostnames, or ports; such values now appear as normal strings.
--   Updated numeric regex to accept values like `.8` as valid numbers, matching CS2 behavior.
--   Renamed comment scope from `comment.line.cs2-cfg` → `comment.line.double-slash.cs2-cfg`.
--   Refactored repository structure for improved maintainability and cleaner grammar.
--   Fixed accidental numeric highlighting of malformed network values.
+-   Updated string parsing to follow Valve’s official syntax.
+-   **Significantly** reduced the extension’s size.
+-   Fixed leading zeros being allowed in IPv4 addresses.
+-   Fixed an issue where a character at the end of a string was incorrectly counted as part of the string.

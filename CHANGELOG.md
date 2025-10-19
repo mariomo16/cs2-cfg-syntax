@@ -4,6 +4,18 @@ All notable changes to the "cs2-cfg-syntax" extension will be documented in this
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.2] - 2025-10-19
+
+### Changed
+
+-   Changed how strings are read to follow Valve’s official syntax.
+-   **Significantly** reduced the extension’s size.
+
+### Fixed
+
+-   Fixed a bug that allowed leading zeros in IPv4 addresses.
+-   Fixed a bug where a character followed by the end of a string was also counted as part of the string.
+
 ## [0.3.1] - 2025-10-18
 
 ### Changed
