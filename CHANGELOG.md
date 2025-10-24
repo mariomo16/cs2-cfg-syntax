@@ -4,6 +4,27 @@ All notable changes to the "cs2-cfg-syntax" extension will be documented in this
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.3] - 2025-10-24
+
+### Changed
+
+-   Adjusted several **scopes** to better differentiate syntax elements.
+-   Updated the **main command regex**:
+    -   Removed obsolete or non-existent commands.
+    -   Added missing commands.
+    -   Split generic regexes (like `cl_*`, `sv_*`, etc.) from specific command patterns for improved accuracy.
+-   Standardized **repository block names** to a consistent format (`#comment`, `#command`, `#string`, `#network`, `#literal`, `#separator`).
+-   Simplified several **regex patterns** to improve readability and performance.
+-   Added **syntax highlighting** for new parameters:  
+    `starttimeout`, `relative`, `subclass_change`, and `weapon_knife`.
+-   Added **reserved words** used only in binds:  
+    `pitch`, `yaw`, `messagemode`, and `messagemode2`.
+
+### Improved
+
+-   Overall scope consistency and keyword classification.
+-   More accurate highlighting for common CS2 configuration commands and parameters.
+
 ## [0.3.2] - 2025-10-19
 
 ### Changed

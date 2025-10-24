@@ -30,11 +30,13 @@ Or open your user settings (`Ctrl+,`) and add the configuration manually:
 
 ## Release Notes
 
-### 0.3.2
+### Version 0.3.3
 
-Patch release with improved string and IPv4 parsing for CS2 config (`.cfg`) syntax highlighting.
+Focused on improving precision and consistency:
 
--   Updated string parsing to follow Valve’s official syntax.
--   **Significantly** reduced the extension’s size.
--   Fixed leading zeros being allowed in IPv4 addresses.
--   Fixed an issue where a character at the end of a string was incorrectly counted as part of the string.
+-   Revised and refined scopes for clearer highlighting.
+-   Updated command regex: removed old commands, added missing ones.
+-   Split generic patterns (`cl_*`, `sv_*`, etc.) from specific command regexes.
+-   Added new parameters: `starttimeout`, `relative`, `subclass_change`, `weapon_knife`.
+-   Added reserved bind-only keywords: `pitch`, `yaw`, `messagemode`, `messagemode2`.
+-   Simplified several regex patterns and standardized block names.
