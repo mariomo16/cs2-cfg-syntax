@@ -1,6 +1,7 @@
-# CS2 Config Highlighter
+# CS2 Config Syntax for Visual Studio Code
 
-Makes `.cfg` files clear and visually organized with color-coded syntax highlighting for easy editing.
+Makes Counter-Strike 2 `.cfg` files clear and visually organized with comprehensive color-coded syntax highlighting. Recognizes all console commands and variables (ConVars) as of October 25, 2025.
+Also compatible with Counter-Strike: Global Offensive `.cfg` files.
 
 ## Features
 
@@ -8,7 +9,19 @@ Makes `.cfg` files clear and visually organized with color-coded syntax highligh
 | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | ![extensionOff](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOff.png) | ![extensionOn](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOn.png) |
 
-Differences shown in my own cfg file (using CS2 Config Highlighter v0.3.0) with [Catppuccin](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
+Makes CS2 config files easier to read and edit with color coding for:
+
+-   **ConVars**: All current console commands and variables as of October 25, 2025 (e.g., `sensitivity`, `cl_crosshair`, `mp_roundtime`, `exec`, `echo`)
+-   **Aliases**: Custom alias definitions with highlighted names
+-   **Keybinds**: All keys, mouse buttons, and scancodes
+-   **Maps & Weapons**: Map names (`de_dust2`, `cs_italy`) and weapon identifiers
+-   **Network**: IPv4 addresses and hostnames with ports
+-   **Values**: Numbers, booleans, and strings
+-   **Comments**: Line comments starting with `//`
+
+### Known Issues
+
+-   Some regex patterns are intentionally broad (e.g., `r_`) and may match more identifiers than intended.
 
 ## Setup
 
@@ -22,21 +35,38 @@ Or open your user settings (`Ctrl+,`) and add the configuration manually:
 
 <img src="https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/settings.png" alt="Alt Text" style="width:50%; height:auto;">
 
-### Known Issues
-
--   Regex patterns have not been thoroughly reviewed; there may be more efficient approaches.
--   Some regex patterns are intentionally broad. For example, `r_\w+` will match any identifier starting with `r_`, which might highlight more than expected.
--   Not all [commands](https://developer.valvesoftware.com/wiki/List_of_Counter-Strike_2_console_commands_and_variables) are included yet.
-
 ## Release Notes
 
-### Version 0.3.3
+### 1.0.0
 
-Focused on improving precision and consistency:
+Major release with comprehensive syntax highlighting improvements and new features.
 
--   Revised and refined scopes for clearer highlighting.
--   Updated command regex: removed old commands, added missing ones.
--   Split generic patterns (`cl_*`, `sv_*`, etc.) from specific command regexes.
--   Added new parameters: `starttimeout`, `relative`, `subclass_change`, `weapon_knife`.
--   Added reserved bind-only keywords: `pitch`, `yaw`, `messagemode`, `messagemode2`.
--   Simplified several regex patterns and standardized block names.
+#### ✨ New Features
+
+-   **Alias Detection**: Alias names are now highlighted with distinct colors
+    -   `alias "QuickBuy" "buy ak47; buy vest"` - "QuickBuy" gets special highlighting
+    -   Works with both quoted and unquoted alias names
+-   **Keybind Recognition**: Bound keys now have their own syntax highlighting
+    -   Standard keys: `a-z`, `0-9`, `SPACE`, `ENTER`, `TAB`, etc.
+    -   Mouse buttons: `MOUSE1-5`, `MOUSE_X`, `MOUSE_Y`, `MWHEELUP`, `MWHEELDOWN`
+    -   Numpad keys: `KP_INS`, `KP_HOME`, `KP_ENTER`, etc.
+    -   Scancodes: `scancode0` through `scancode255`
+-   **Map Name Highlighting**: Map names are now recognized and colored
+    -   Arms Race maps: `ar_baggage`, `ar_shoots`, etc.
+    -   Hostage maps: `cs_agency`, `cs_italy`, `cs_office`
+    -   Defusal maps: `de_dust2`, `de_ancient`, `de_inferno`, etc.
+-   **Enhanced Parameter Detection**: Added support for weapon parameters and projectile identifiers
+    -   `weapon_knife`, `weapon_ak47`, `weapon_awp`, etc.
+    -   `flashbang_projectile`, `smokegrenade_projectile`, etc.
+
+#### 🔧 Improvements
+
+-   Optimized regex patterns using non-capturing groups for better performance
+-   Reorganized syntax scopes for more accurate semantic highlighting
+-   Expanded command list with additional console commands
+-   Improved quote handling in aliases and binds
+
+#### 🐛 Fixes
+
+-   Fixed pattern processing order for better string content detection
+-   Consistent punctuation coloring for quotes in special contexts

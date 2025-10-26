@@ -3,8 +3,11 @@
     "name": "CS2 Config",
     "patterns": [
         { "include": "#comment" },
-        { "include": "#command" },
         { "include": "#string" },
+        { "include": "#command" },
+        { "include": "#entity" },
+        { "include": "#keybind" },
+        { "include": "#binding" },
         { "include": "#network" },
         { "include": "#literal" },
         { "include": "#separator" }
@@ -18,30 +21,6 @@
                 }
             ]
         },
-        "command": {
-            "patterns": [
-                {
-                    "name": "support.function.cs2-cfg",
-                    "match": "\\+(attack|attack2|back|duck|forward|jump|left|lookatweapon|reload|right|showscores|spray_menu|sprint|use|voicerecord)\\b"
-                },
-                {
-                    "name": "variable.parameter.cs2-cfg",
-                    "match": "\\bstarttimeout|relative|subclass_change|weapon_knife\\b"
-                },
-                {
-                    "name": "support.type.cs2-cfg",
-                    "match": "\\b(pitch|yaw|messagemode2?)\\b"
-                },
-                {
-                    "name": "keyword.control.cs2-cfg",
-                    "match": "\\b(_record|adsp_debug|alias|axis|battery_saver|benchframe|box|bug_submitter_override|button_info|callvote|camortho|cancelselect|changelevel|chicken_stop|closecaption|clutch_mode_toggle|collect_entity_model_name|create_radius_damage|CreatePredictionError|crosshair|CS_WarnFriendlyDamageInterval|custom_bot_difficulty|cvarlist|cyclevar|default_fov|developer|differences|dlight_debug|dm_togglerandomweapons|drop|echo|echoln|enable_boneflex|endmatch_votenextmap|endround|english|entity_log_load_unserialize|eom_local_player_defeat_anim_enabled|escape|firetarget|firstperson|func_break_max_pieces|global_set|god|gotv_theater_container|grep|groups|help|hideconsole|impulse|incrementvar|install_dlc_workshoptools_cvar|ip|iv_debugbone|joystick|lastinv|launch_warmup_map|lobby_default_privacy_bits2|lockMoveControllerRet|menuselect|minimap_create|model_default_preview_sequence_name|motdfile|mouse_inverty|multvar|name|notarget|password|pause|pixelvis_debug|plant_bomb|quit|rate|rebuy|record|regenerate_weapon_skins|reloadgame|remove_weapon|repeat_last_console_command|restart|run_perftest|scene_playvcd|screenmessage_show|sdr|sellbackall|servercfgfile|silence_dps|speaker_config|splitscreen_mode|startdemos|steam_controller_haptics|subclass_create|teammenu|think_limit|trusted_launch|unbind|unbindall|unpause|vconsole_rcon_server_details|workshop_annotation_submit|writekeybindings|zoom_sensitivity_ratio)\\b"
-                },
-                {
-                    "name": "keyword.control.cs2-cfg",
-                    "match": "\\b(ai_|ammo_|anim|anotation_|auto|bind|bot_|buddha|buy|c_|cam_|camera_|cash_|cc_|cl_|clear|commentary|con|contributionscore_|cq_|crash_|cs_|csgo_|csm_|cv_|debug|demo|dis|dota_|draw|ds|dump|engine_|ent_|exec|explode|fade|ff_|find|fish_|fog_|fov_|fps_max|fs_|g_|game|get|give|glow_|heal|host|hud_|hurt|imgui_|inferno_|input_|invnext|invprev|joy_|key_|kick|labelled_debug_helper_|lb_|list|log|m_|map|markup_group_|mat_|mesh_calculate_curvature_smooth_|mm_|mobile_fps_|molotov_|movement_stats_|mp_|nav_|navspace_|net_|next|noclip|option_|panorama_|particle_|phys_|play|print_|prop_|pulse_|pvs_|pwatch|r_|radarvi|radio|ragdoll_|range|rcon|recast_|replay_|report_|reset_|retake_|rr_|safezone|save_|say|sc_|script_|sensitivity|set|shake_|shatterglass_|show|sk|slot|snd_|sound|spawn_|spec_|status|stop|surf|suspicious_hit_|sv_|switchhands|sys_|telemetry_|Test_|test_|thirdperson|time|toggle|tv_|ui_|view|violence_|vis|vmix_|voice_|volume|weapon_)[_a-zA-Z0-9]*\\b"
-                }
-            ]
-        },
         "string": {
             "patterns": [
                 {
@@ -52,10 +31,113 @@
                         { "include": "$self" },
                         { "include": "#command" },
                         { "include": "#entity" },
+                        { "include": "#keybind" },
+                        { "include": "#binding" },
                         { "include": "#network" },
                         { "include": "#literal" },
                         { "include": "#separator" }
                     ]
+                }
+            ]
+        },
+        "command": {
+            "patterns": [
+                {
+                    "name": "support.function.cs2-cfg",
+                    "match": "\\+(?:attack|attack2|back|duck|forward|jump|left|lookatweapon|reload|right|showscores|spray_menu|sprint|use|voicerecord)\\b"
+                },
+                {
+                    "name": "variable.parameter.cs2-cfg",
+                    "match": "\\b(?:starttimeout|relative|subclass_change|weapon_(?:c4|healthshot|knife|taser|cz75a|deagle|elite|fiveseven|glock|hkp2000|p250|revolver|tec9|usp_silencer|bizon|mac10|mp5sd|mp7|mp9|p90|ump45|mag7|nova|sawedoff|xm1014|m249|negev|ak47|aug|awp|famas|galilar|g3sg1|m4a1|m4a1_silencer|scar20|sg556|ssg08|flashbang|smokegrenade|hegrenade|molotov|incgrenade|decoy)|(?:flashbang|smokegrenade|hegrenade|molotov|decoy)_projectile)\\b"
+                },
+                {
+                    "name": "keyword.control.cs2-cfg",
+                    "match": "\\b(?:pitch|yaw|messagemode2?)\\b"
+                },
+                {
+                    "name": "support.function.cs2-cfg",
+                    "match": "\\b(?:_record|adsp_debug|axis|battery_saver|benchframe|binddefaults|bindss|box|bug_submitter_override|button_info|callvote|camortho|cancelselect|changelevel|chicken_stop|closecaption|clutch_mode_toggle|collect_entity_model_name|create_radius_damage|CreatePredictionError|crosshair|CS_WarnFriendlyDamageInterval|custom_bot_difficulty|cvarlist|cyclevar|default_fov|developer|differences|dlight_debug|dm_togglerandomweapons|drop|echo|echoln|enable_boneflex|endmatch_votenextmap|endround|english|entity_log_load_unserialize|eom_local_player_defeat_anim_enabled|escape|firetarget|firstperson|func_break_max_pieces|global_set|god|gotv_theater_container|grep|groups|help|hideconsole|impulse|incrementvar|install_dlc_workshoptools_cvar|ip|iv_debugbone|joystick|kill|lastinv|launch_warmup_map|lobby_default_privacy_bits2|lockMoveControllerRet|menuselect|minimap_create|model_default_preview_sequence_name|motdfile|mouse_inverty|multvar|name|notarget|password|pause|pixelvis_debug|plant_bomb|quit|rate|rebuy|record|regenerate_weapon_skins|reloadgame|remove_weapon|repeat_last_console_command|restart|run_perftest|scene_playvcd|screenmessage_show|sdr|sellbackall|servercfgfile|silence_dps|sk_autoaim_mode|skel_constraints_enable|skill|speaker_config|splitscreen_mode|startdemos|steam_controller_haptics|subclass_create|teammenu|think_limit|trusted_launch|unbind|unbindall|unpause|vconsole_rcon_server_details|workshop_annotation_submit|writekeybindings|zoom_sensitivity_ratio)\\b"
+                },
+                {
+                    "name": "support.function.cs2-cfg",
+                    "match": "\\b(?:ai_|ammo_|anim|anotation_|auto|bot_|buddha|buy|c_|cam_|camera_|cash_|cc_|cl_|clear|commentary|con|contributionscore_|cq_|crash_|cs_|csgo_|csm_|cv_|debug|demo|dis|dota_|draw|ds|dump|engine_|ent_|exec|explode|fade|ff_|find|fish_|fog_|fov_|fps_max|fs_|g_|game|get|give|glow_|heal|host|hud_|hurt|imgui_|inferno_|input_|invnext|invprev|joy_|key_|kick|labelled_debug_helper_|lb_|list|log|m_|map|markup_group_|mat_|mesh_calculate_curvature_smooth_|mm_|mobile_fps_|molotov_|movement_stats_|mp_|nav_|navspace_|net_|next|noclip|option_|panorama_|particle_|phys_|play|print_|prop_|pulse_|pvs_|pwatch|r_|radarvi|radio|ragdoll_|range|rcon|recast_|replay_|report_|reset_|retake_|rr_|safezone|save_|say|sc_|script_|sensitivity|set|shake_|shatterglass_|show|skeleton_instance_|slot|snd_|sound|spawn_|spec_|status|stop|surf|suspicious_hit_|sv_|switchhands|sys_|telemetry_|Test_|test_|thirdperson|time|toggle|tv_|ui_|view|violence_|vis|vmix_|voice_|volume|weapon_)[_a-zA-Z0-9]*\\b"
+                }
+            ]
+        },
+        "entity": {
+            "patterns": [
+                {
+                    "name": "entity.name.class.cs2-cfg",
+                    "match": "\\b(?:defuser|taser|vest|vesthelm|cz75a|deagle|elite|fiveseven|glock|hkp2000|p250|revolver|tec9|usp_silencer|bizon|mac10|mp5sd|mp7|mp9|p90|ump45|mag7|nova|sawedoff|xm1014|m249|negev|ak47|aug|awp|famas|galilar|g3sg1|m4a1|m4a1_silencer|scar20|sg556|ssg08|flashbang|smokegrenade|hegrenade|molotov|incgrenade|decoy)\\b"
+                },
+                {
+                    "name": "entity.name.class.cs2-cfg",
+                    "match": "\\b(?:ar_(?:baggage|pool_day|shoots|shoots_night)|cs_(?:agency|italy|office)|de_(?:ancient|ancient_night|anubis|dust2|golden|inferno|mirage|nuke|overpass|palacio|rooftop|train|vertigo)|lobby_mapveto)\\b"
+                }
+            ]
+        },
+        "keybind": {
+            "patterns": [
+                {
+                    "begin": "\\b(bind)\\s+(\")",
+                    "end": "\"",
+                    "beginCaptures": {
+                        "1": { "name": "support.function.cs2-cfg" },
+                        "2": { "name": "punctuation.definition.string.begin.cs2-cfg" }
+                    },
+                    "endCaptures": {
+                        "0": { "name": "punctuation.definition.string.end.cs2-cfg" }
+                    },
+                    "patterns": [
+                        {
+                            "name": "constant.language.cs2-cfg",
+                            "match": "\\b(?:0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|SPACE|ENTER|ESCAPE|BACKSPACE|TAB|CAPSLOCK|SHIFT|CTRL|ALT|SEMICOLON|F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|MOUSE1|MOUSE2|MOUSE3|MOUSE4|MOUSE5|MOUSE_X|MOUSE_Y|MWHEELUP|MWHEELDOWN|LEFTARROW|RIGHTARROW|UPARROW|DOWNARROW|INS|DEL|HOME|END|PGUP|PGDN|KP_INS|KP_DEL|KP_END|KP_DOWNARROW|KP_PGDN|KP_LEFTARROW|KP_5|KP_RIGHTARROW|KP_HOME|KP_UPARROW|KP_PGUP|KP_SLASH|KP_MULTIPLY|KP_MINUS|KP_PLUS|KP_ENTER)\\b"
+                        },
+                        {
+                            "name": "constant.language.cs2-cfg",
+                            "match": "\\bscancode(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\b"
+                        }
+                    ]
+                },
+                {
+                    "match": "\\b(bind)\\s+(\\S+)",
+                    "captures": {
+                        "1": { "name": "support.function.cs2-cfg" },
+                        "2": { "name": "constant.language.cs2-cfg" }
+                    }
+                }
+            ]
+        },
+        "binding": {
+            "patterns": [
+                {
+                    "begin": "\\b(alias)\\s+(\")",
+                    "end": "\"",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "support.function.cs2-cfg"
+                        },
+                        "2": {
+                            "name": "punctuation.definition.string.begin.cs2-cfg"
+                        }
+                    },
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.cs2-cfg"
+                        }
+                    },
+                    "contentName": "entity.name.type.cs2-cfg"
+                },
+                {
+                    "match": "\\b(alias)\\s+(\\S+)",
+                    "captures": {
+                        "1": {
+                            "name": "support.function.cs2-cfg"
+                        },
+                        "2": {
+                            "name": "entity.name.type.cs2-cfg"
+                        }
+                    }
                 }
             ]
         },
@@ -90,7 +172,7 @@
                 },
                 {
                     "name": "constant.language.cs2-cfg",
-                    "match": "\\btrue|false\\b"
+                    "match": "\\b(?:true|false)\\b"
                 }
             ]
         },

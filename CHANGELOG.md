@@ -1,8 +1,50 @@
-# Change Log
+# Changelog
 
-All notable changes to the "cs2-cfg-syntax" extension will be documented in this file.
+All notable changes to the "CS2 Config Syntax" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.0.0] - 2025-10-26
+
+### Added
+
+-   **Alias name highlighting**: Alias names now have specific syntax highlighting (`entity.name.type`)
+    -   Support for quoted aliases: `alias "name" "command"`
+    -   Support for unquoted aliases: `alias name command`
+-   **Keybind highlighting**: Bound keys now have specific colorization
+    -   Support for standard keys (a-z, 0-9, SPACE, ENTER, etc.)
+    -   Support for special keys (MOUSE1-5, MOUSE_X, MOUSE_Y, MWHEELUP/DOWN)
+    -   Support for numpad keys (KP\_\*)
+    -   Support for scancodes (scancode0-255)
+-   **Map name highlighting**:
+    -   Arms Race maps (ar\_\*)
+    -   Hostage maps (cs\_\*)
+    -   Defusal maps (de\_\*)
+    -   Lobby mapveto
+-   **New command parameters detected**:
+    -   `weapon_*` (all weapon variants)
+    -   `*_projectile` (grenade projectiles)
+
+### Changed
+
+-   **Scope reorganization**: Several scopes changed for better semantics
+    -   `pitch`, `yaw`, `messagemode` changed from `support.type` to `keyword.control`
+    -   Weapons and maps changed from `support.type` to `entity.name.class`
+    -   Specific commands now use `support.function` instead of `keyword.control`
+-   **Improved command patterns**: Using non-capturing groups `(?:...)` for better performance
+-   **Expanded command list**: Added missing commands like `binddefaults`, `bindss`, `kill`
+
+### Fixed
+
+-   **Improved pattern order**: Strings are now processed correctly with all sub-patterns included
+-   **Improved quote detection**: Quotes in aliases and binds are now consistently colored as `punctuation.definition.string`
+
+## [0.3.4] - 2025-10-25
+
+### Fixed
+
+-   Fixed an issue where some words were incorrectly highlighted due to an overly general regex pattern matching `sk`.
 
 ## [0.3.3] - 2025-10-24
 

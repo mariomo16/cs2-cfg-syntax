@@ -1,10 +1,10 @@
 {
     "name": "cs2-cfg-syntax",
-    "displayName": "CS2 Config Highlighter",
-    "description": "Color-coded syntax for .cfg files — read and edit with ease.",
+    "displayName": "CS2 Config Syntax",
+    "description": "Syntax highlighting for CS2 .cfg files",
     "publisher": "mario-morales-ortega",
     "icon": "./icon.webp",
-    "version": "0.3.3",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.104.0"
     },
