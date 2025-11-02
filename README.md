@@ -4,6 +4,7 @@ Makes Counter-Strike 2 `.cfg` files clear and visually organized with comprehens
 Also compatible with Counter-Strike: Global Offensive `.cfg` files.
 
 ## Features
+> Screenshots taken with [Catppuccin for VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc) v3.18.1 & [CS2 Config Syntax](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax) v0.3.0
 
 | Extension Off                                                                                                  | Extension On                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -37,36 +38,8 @@ Or open your user settings (`Ctrl+,`) and add the configuration manually:
 
 ## Release Notes
 
-### 1.0.0
+### [1.0.1] - 2025-11-02
 
-Major release with comprehensive syntax highlighting improvements and new features.
+#### Removed
 
-#### ✨ New Features
-
--   **Alias Detection**: Alias names are now highlighted with distinct colors
-    -   `alias "QuickBuy" "buy ak47; buy vest"` - "QuickBuy" gets special highlighting
-    -   Works with both quoted and unquoted alias names
--   **Keybind Recognition**: Bound keys now have their own syntax highlighting
-    -   Standard keys: `a-z`, `0-9`, `SPACE`, `ENTER`, `TAB`, etc.
-    -   Mouse buttons: `MOUSE1-5`, `MOUSE_X`, `MOUSE_Y`, `MWHEELUP`, `MWHEELDOWN`
-    -   Numpad keys: `KP_INS`, `KP_HOME`, `KP_ENTER`, etc.
-    -   Scancodes: `scancode0` through `scancode255`
--   **Map Name Highlighting**: Map names are now recognized and colored
-    -   Arms Race maps: `ar_baggage`, `ar_shoots`, etc.
-    -   Hostage maps: `cs_agency`, `cs_italy`, `cs_office`
-    -   Defusal maps: `de_dust2`, `de_ancient`, `de_inferno`, etc.
--   **Enhanced Parameter Detection**: Added support for weapon parameters and projectile identifiers
-    -   `weapon_knife`, `weapon_ak47`, `weapon_awp`, etc.
-    -   `flashbang_projectile`, `smokegrenade_projectile`, etc.
-
-#### 🔧 Improvements
-
--   Optimized regex patterns using non-capturing groups for better performance
--   Reorganized syntax scopes for more accurate semantic highlighting
--   Expanded command list with additional console commands
--   Improved quote handling in aliases and binds
-
-#### 🐛 Fixes
-
--   Fixed pattern processing order for better string content detection
--   Consistent punctuation coloring for quotes in special contexts
+-   **Self-recursion in strings**: Removed `{ "include": "$self" }` from the `string` pattern to prevent infinite recursion and performance issues.
