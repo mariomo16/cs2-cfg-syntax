@@ -4,6 +4,7 @@ Makes Counter-Strike 2 `.cfg` files clear and visually organized with comprehens
 Also compatible with Counter-Strike: Global Offensive `.cfg` files.
 
 ## Features
+
 > Screenshots taken with [Catppuccin for VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc) v3.18.1 & [CS2 Config Syntax](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax) v0.3.0
 
 | Extension Off                                                                                                  | Extension On                                                                                                 |
