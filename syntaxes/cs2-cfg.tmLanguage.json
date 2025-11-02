@@ -28,7 +28,6 @@
                     "begin": "\"",
                     "end": "\"",
                     "patterns": [
-                        { "include": "$self" },
                         { "include": "#command" },
                         { "include": "#entity" },
                         { "include": "#keybind" },
