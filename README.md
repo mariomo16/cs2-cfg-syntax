@@ -36,11 +36,3 @@ The extension should activate automatically. If it doesn’t, follow these steps
 Or open your user settings (`Ctrl+,`) and add the configuration manually:
 
 <img src="https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/settings.png" alt="Alt Text" style="width:50%; height:auto;">
-
-## Release Notes
-
-### [1.0.1] - 2025-11-02
-
-#### Removed
-
--   **Self-recursion in strings**: Removed `{ "include": "$self" }` from the `string` pattern to prevent infinite recursion and performance issues.

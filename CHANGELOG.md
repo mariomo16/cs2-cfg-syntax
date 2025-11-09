@@ -5,6 +5,16 @@ All notable changes to the "CS2 Config Syntax" extension will be documented in t
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2025-11-09
+
+### Added
+
+-   Added backtick (`) key to keybind syntax highlighting
+
+### Changed
+
+-   Optimized keybind regex pattern for better performance and maintainability
+
 ## [1.0.1] - 2025-11-02
 
 ### Removed

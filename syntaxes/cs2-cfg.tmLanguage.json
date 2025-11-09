@@ -90,7 +90,7 @@
                     "patterns": [
                         {
                             "name": "constant.language.cs2-cfg",
-                            "match": "\\b(?:0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|SPACE|ENTER|ESCAPE|BACKSPACE|TAB|CAPSLOCK|SHIFT|CTRL|ALT|SEMICOLON|F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|MOUSE1|MOUSE2|MOUSE3|MOUSE4|MOUSE5|MOUSE_X|MOUSE_Y|MWHEELUP|MWHEELDOWN|LEFTARROW|RIGHTARROW|UPARROW|DOWNARROW|INS|DEL|HOME|END|PGUP|PGDN|KP_INS|KP_DEL|KP_END|KP_DOWNARROW|KP_PGDN|KP_LEFTARROW|KP_5|KP_RIGHTARROW|KP_HOME|KP_UPARROW|KP_PGUP|KP_SLASH|KP_MULTIPLY|KP_MINUS|KP_PLUS|KP_ENTER)\\b"
+                            "match": "\\b(?:[0-9a-z]|`|SPACE|ENTER|ESCAPE|BACKSPACE|TAB|CAPSLOCK|SHIFT|CTRL|ALT|SEMICOLON|F(?:1[0-2]|[1-9])|MOUSE[1-5]|MOUSE_[XY]|MWHEEL(?:UP|DOWN)|(?:LEFT|RIGHT|UP|DOWN)ARROW|INS|DEL|HOME|END|PG(?:UP|DN)|KP_(?:INS|DEL|END|DOWNARROW|PGDN|LEFTARROW|5|RIGHTARROW|HOME|UPARROW|PGUP|SLASH|MULTIPLY|MINUS|PLUS|ENTER))\\b"
                         },
                         {
                             "name": "constant.language.cs2-cfg",
