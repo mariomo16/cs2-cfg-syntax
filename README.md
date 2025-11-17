@@ -1,6 +1,7 @@
 # CS2 Config Syntax for Visual Studio Code
 
 Makes Counter-Strike 2 `.cfg` files clear and visually organized with comprehensive color-coded syntax highlighting. Recognizes all console commands and variables (ConVars) as of October 25, 2025.
+
 Also compatible with Counter-Strike: Global Offensive `.cfg` files.
 
 ## Features
