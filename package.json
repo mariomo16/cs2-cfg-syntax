@@ -9,8 +9,19 @@
 		"vscode": "^1.104.0"
 	},
 	"categories": [
-		"Programming Languages"
+		"Programming Languages",
+		"Other"
 	],
+	"keywords": [
+		"cs2",
+		"counter-strike",
+		"cfg",
+		"config",
+		"syntax",
+		"highlighting",
+		"game"
+	],
+	"activationEvents": [],
 	"contributes": {
 		"languages": [
 			{
@@ -37,5 +48,9 @@
 		"type": "git",
 		"url": "https://github.com/mariomo16/cs2-cfg-syntax"
 	},
+	"bugs": {
+		"url": "https://github.com/mariomo16/cs2-cfg-syntax/issues"
+	},
+	"homepage": "https://github.com/mariomo16/cs2-cfg-syntax#readme",
 	"license": "MIT"
 }
