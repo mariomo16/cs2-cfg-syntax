@@ -43,7 +43,7 @@
 			"patterns": [
 				{
 					"name": "support.function.cs2-cfg",
-					"match": "\\+(?:attack|attack2|back|duck|forward|jump|left|lookatweapon|reload|right|showscores|spray_menu|sprint|use|voicerecord)\\b"
+					"match": "\\[+-](?:attack|attack2|back|duck|forward|jump|left|lookatweapon|reload|right|showscores|spray_menu|sprint|use|voicerecord)\\b"
 				},
 				{
 					"name": "variable.parameter.cs2-cfg",
