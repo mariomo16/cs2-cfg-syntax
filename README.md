@@ -20,7 +20,7 @@ Color-coded syntax highlighting for Counter-Strike 2 `.cfg` files. Recognizes al
 
 Highlights the following elements in CS2 config files:
 
-- **ConVars**: All current console commands and variables (e.g., `sensitivity`, `cl_crosshair`, `mp_roundtime`, `exec`, `echo`)
+- **ConVars**: All current console commands and variables (e.g., `sensitivity`, `mp_roundtime`, `exec`)
 - **Aliases**: Custom alias definitions with highlighted names
 - **Keybinds**: All keys, mouse buttons, and scancodes
 - **Maps & Weapons**: Map names (`de_cache`, `cs_italy`) and weapon identifiers
@@ -45,7 +45,7 @@ Alternatively, add this to your user settings (`Ctrl+,`):
 
 ![VS Code settings.json showing the file association configuration for .cfg files](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/settings.png)
 
-### Known Issues
+## Known Issues
 
 - Some regex patterns are intentionally broad (e.g., `r_`) and may match more identifiers than intended.
 
