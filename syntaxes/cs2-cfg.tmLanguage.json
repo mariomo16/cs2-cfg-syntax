@@ -71,7 +71,7 @@
 				},
 				{
 					"name": "entity.name.class.cs2-cfg",
-					"match": "\\b(?:ar_(?:baggage|pool_day|shoots|shoots_night)|cs_(?:agency|italy|office)|de_(?:ancient|ancient_night|anubis|dust2|golden|inferno|mirage|nuke|overpass|palacio|rooftop|train|vertigo)|lobby_mapveto)\\b"
+					"match": "\\b(?:ar_(?:baggage|pool_day|shoots|shoots_night)|cs_(?:agency|italy|office)|de_(?:ancient|ancient_night|anubis|cache|dust2|golden|inferno|mirage|nuke|overpass|palacio|rooftop|train|vertigo)|lobby_mapveto)\\b"
 				}
 			]
 		},
