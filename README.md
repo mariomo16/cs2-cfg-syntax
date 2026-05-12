@@ -10,7 +10,7 @@ Color-coded syntax highlighting for Counter-Strike 2 `.cfg` files. Recognizes al
 
 ## Preview
 
-> Screenshots taken with [Catppuccin for VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc) v3.18.1
+> Screenshots taken with Dark 2026 (built-in theme)
 
 | Without Extension | With Extension |
 | --- | --- |
