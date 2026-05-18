@@ -4,9 +4,9 @@
 	"description": "Syntax highlighting for CS2 .cfg files",
 	"publisher": "mario-morales-ortega",
 	"icon": "./icon.webp",
-	"version": "1.1.2",
+	"version": "1.2.0",
 	"engines": {
-		"vscode": "^1.104.0"
+		"vscode": "^1.120.0"
 	},
 	"categories": [
 		"Programming Languages",
@@ -20,6 +20,10 @@
 		"syntax",
 		"highlighting",
 		"game"
+	],
+	"main": "./out/extension.js",
+	"activationEvents": [
+		"onLanguage:cs2-cfg"
 	],
 	"contributes": {
 		"languages": [
@@ -43,6 +47,10 @@
 			}
 		]
 	},
+	"scripts": {
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/mariomo16/cs2-cfg-syntax"
@@ -51,5 +59,10 @@
 		"url": "https://github.com/mariomo16/cs2-cfg-syntax/issues"
 	},
 	"homepage": "https://github.com/mariomo16/cs2-cfg-syntax#readme",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "24.12.4",
+		"@types/vscode": "^1.120.0",
+		"typescript": "6.0.3"
+	}
 }
