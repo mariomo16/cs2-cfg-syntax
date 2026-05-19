@@ -27,16 +27,17 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function buildCompletionItems(): vscode.CompletionItem[] {
-	return (commands.commands as string[]).map((command) => {
-		const item = new vscode.CompletionItem(
-			command,
-			vscode.CompletionItemKind.Function,
-		);
+	const prefixEntries = Object.entries(CVAR_PREFIXES);
 
-		const prefix = Object.keys(CVAR_PREFIXES).find((p) =>
-			command.startsWith(p),
-		);
-		item.detail = prefix ? CVAR_PREFIXES[prefix] : "CS2 ConCommand";
+	return (commands.commands as string[]).map((command) => {
+		const match = prefixEntries.find(([prefix]) => command.startsWith(prefix));
+
+		const kind = match
+			? vscode.CompletionItemKind.Variable
+			: vscode.CompletionItemKind.Function;
+
+		const item = new vscode.CompletionItem(command, kind);
+		item.detail = match ? match[1] : "CS2 ConCommand";
 
 		return item;
 	});
