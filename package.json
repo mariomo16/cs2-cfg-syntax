@@ -1,7 +1,7 @@
 {
 	"name": "cs2-cfg-syntax",
 	"displayName": "CS2 Config Syntax",
-	"description": "Syntax highlighting for CS2 .cfg files",
+	"description": "Syntax highlighting & IntelliSense for CS2 .cfg files",
 	"publisher": "mario-morales-ortega",
 	"icon": "./icon.webp",
 	"version": "1.2.0",
