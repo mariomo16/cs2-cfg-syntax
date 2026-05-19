@@ -1,5 +1,6 @@
 {
 	"commands": [
+		"_record",
 		"adsp_debug",
 		"ai_debug_dyninteractions",
 		"ai_debug_los",
