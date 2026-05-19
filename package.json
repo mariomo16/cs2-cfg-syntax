@@ -22,9 +22,7 @@
 		"game"
 	],
 	"main": "./out/extension.js",
-	"activationEvents": [
-		"onLanguage:cs2-cfg"
-	],
+	"activationEvents": [],
 	"contributes": {
 		"languages": [
 			{
