@@ -2,19 +2,15 @@ import * as vscode from "vscode";
 import commands from "../resources/commands.json";
 
 const CVAR_PREFIXES: Record<string, string> = {
-	cl_: "Client CVar",
-	sv_: "Server CVar",
-	mp_: "Multiplayer CVar",
-	r_: "Render CVar",
+	cl_: "Client ConVar",
+	sv_: "Server ConVar",
+	mp_: "Multiplayer ConVar",
+	r_: "Render ConVar",
 };
 
 const COMPLETION_ITEMS: vscode.CompletionItem[] = buildCompletionItems();
 
 export function activate(context: vscode.ExtensionContext) {
-	vscode.window.showInformationMessage(
-		"¡Extensión CS2-CFG activada correctamente!",
-	);
-
 	const completionProvider = vscode.languages.registerCompletionItemProvider(
 		"cs2-cfg",
 		{
@@ -22,7 +18,6 @@ export function activate(context: vscode.ExtensionContext) {
 				_document: vscode.TextDocument,
 				_position: vscode.Position,
 			): vscode.CompletionList {
-				vscode.window.showInformationMessage("¡Autocompletado ejecutado!");
 				return new vscode.CompletionList(COMPLETION_ITEMS, false);
 			},
 		},
@@ -41,7 +36,7 @@ function buildCompletionItems(): vscode.CompletionItem[] {
 		const prefix = Object.keys(CVAR_PREFIXES).find((p) =>
 			command.startsWith(p),
 		);
-		item.detail = prefix ? CVAR_PREFIXES[prefix] : "CS2 Command";
+		item.detail = prefix ? CVAR_PREFIXES[prefix] : "CS2 ConCommand";
 
 		return item;
 	});
