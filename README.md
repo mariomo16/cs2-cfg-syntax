@@ -1,8 +1,8 @@
 # CS2 Config Syntax for Visual Studio Code
 
-Color-coded syntax highlighting for Counter-Strike 2 `.cfg` files. Recognizes all console commands and ConVars as of October 25, 2025.
+Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all ConVars & ConCommands as of May 19, 2026.
 
-> Also compatible with Counter-Strike: Global Offensive `.cfg` files.
+> Partial backward compatibility with CS:GO `.cfg` files.
 
 [![Version](https://vsmarketplacebadges.dev/version/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
 [![Installs](https://vsmarketplacebadges.dev/installs/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
@@ -20,7 +20,7 @@ Color-coded syntax highlighting for Counter-Strike 2 `.cfg` files. Recognizes al
 
 Highlights the following elements in CS2 config files:
 
-- **ConVars**: All current console commands and variables (e.g., `sensitivity`, `mp_roundtime`, `exec`)
+- **ConVars & ConCommands**: All current console commands and variables (e.g., `sensitivity`)
 - **Aliases**: Custom alias definitions with highlighted names
 - **Keybinds**: All keys, mouse buttons, and scancodes
 - **Maps & Weapons**: Map names (`de_cache`, `cs_italy`) and weapon identifiers

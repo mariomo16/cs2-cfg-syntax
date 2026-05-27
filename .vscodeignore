@@ -1,3 +1,7 @@
 images/
-vsc-extension-quickstart.md
+out/*.map
+src/
 .gitignore
+example.cfg
+tsconfig.json
+vsc-extension-quickstart.md
