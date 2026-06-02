@@ -1793,6 +1793,7 @@
 		"r_size_cull_threshold_shadow",
 		"r_skinning_enabled",
 		"r_smooth_morph_normals",
+		"r_spectator_flashbang_opacity",
 		"r_test1_maximum_wait_ms",
 		"r_texture_lod_scale",
 		"r_translucent",
