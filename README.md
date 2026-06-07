@@ -1,4 +1,4 @@
-# CS2 Config Syntax for Visual Studio Code
+# CS2 Config Support for Visual Studio Code
 
 Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all ConVars & ConCommands as of May 19, 2026.
 
@@ -30,7 +30,7 @@ Highlights the following elements in CS2 config files:
 
 ## Installation
 
-Search **CS2 Config Syntax** in the VS Code Extensions panel (`Ctrl+Shift+X`) or install directly from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax).
+Search **CS2 Config Support** in the VS Code Extensions panel (`Ctrl+Shift+X`) or install directly from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax).
 
 ## Setup
 
