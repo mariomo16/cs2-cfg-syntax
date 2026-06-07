@@ -1837,6 +1837,12 @@
 			"description": ""
 		},
 		{
+			"name": "cl_hide_avatar_images",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
 			"name": "cl_hud_radar_background_alpha",
 			"defaultValue": "",
 			"flags": [],
