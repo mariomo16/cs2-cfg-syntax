@@ -13,7 +13,7 @@ const CVAR_PREFIXES: Record<string, string> = {
 	sv_: "Server ConVar",
 	mp_: "Multiplayer ConVar",
 	r_: "Render ConVar",
-};
+} as const;
 
 const PREFIX_ENTRIES = Object.entries(CVAR_PREFIXES);
 const commands = commandsJson.commands as CommandInfo[];
@@ -22,7 +22,7 @@ const COMMANDS_MAP = new Map<string, CommandInfo>(
 	commands.map((cmd) => [cmd.name, cmd]),
 );
 
-const COMPLETION_ITEMS: vscode.CompletionItem[] = buildCompletionItems();
+const COMPLETION_ITEMS = buildCompletionItems();
 
 function buildCommandMarkdown(cmd: CommandInfo): vscode.MarkdownString {
 	const md = new vscode.MarkdownString();
