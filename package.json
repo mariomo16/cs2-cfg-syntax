@@ -46,7 +46,7 @@
 		]
 	},
 	"scripts": {
-		"compile": "tsc -p ./",
+		"build": "tsc -p ./",
 		"watch": "tsc -watch -p ./"
 	},
 	"repository": {
