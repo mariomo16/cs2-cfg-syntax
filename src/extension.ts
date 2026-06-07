@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import commandsJson from "../resources/commands.json";
+import cvarsJson from "../resources/cvars.json";
 
 interface CommandInfo {
 	name: string;
@@ -19,7 +19,7 @@ const CVAR_PREFIXES: Record<string, string> = {
 } as const;
 const PREFIX_ENTRIES = Object.entries(CVAR_PREFIXES);
 
-const commands = commandsJson.commands as CommandInfo[];
+const commands = cvarsJson.commands as CommandInfo[];
 const COMMANDS_MAP = new Map<string, CommandInfo>(
 	commands.map((cmd) => [cmd.name, cmd]),
 );
