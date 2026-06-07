@@ -5,11 +5,11 @@ All notable changes to the "CS2 Config Support" extension will be documented in 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.2.0] - 2026-05-19
+## [1.2.0] - 2026-06-07
 
 ### Added
 
-- **IntelliSense & Autocomplete Support**: Added full auto-complete suggestions for CS2 ConVars and ConCommands in `.cfg` files.
+- **IntelliSense support**: Autocompletion and hover information for CS2 ConVars and ConCommands in `.cfg` files.
 
 ### Fixed
 
