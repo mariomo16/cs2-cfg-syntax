@@ -1771,6 +1771,72 @@
 			"description": ""
 		},
 		{
+			"name": "cl_grenadecrosshair_decoy",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "cl_grenadecrosshair_explosive",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "cl_grenadecrosshair_fire",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "cl_grenadecrosshair_flash",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "cl_grenadecrosshair_keepusercrosshair",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "cl_grenadecrosshair_smoke",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "cl_grenadecrosshairdelay_decoy",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "cl_grenadecrosshairdelay_explosive",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "cl_grenadecrosshairdelay_fire",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "cl_grenadecrosshairdelay_flash",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "cl_grenadecrosshairdelay_smoke",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
 			"name": "cl_hud_radar_background_alpha",
 			"defaultValue": "",
 			"flags": [],
@@ -9482,6 +9548,12 @@
 		},
 		{
 			"name": "option_speed_method",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "panorama_console_position_and_size",
 			"defaultValue": "",
 			"flags": [],
 			"description": ""
