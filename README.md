@@ -18,7 +18,7 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 
 ## Features
 
-Highlights the following elements in CS2 config files:
+### Syntax Highlighting
 
 - **ConVars & ConCommands**: All current console commands and variables (e.g., `sensitivity`)
 - **Aliases**: Custom alias definitions with highlighted names
@@ -27,6 +27,11 @@ Highlights the following elements in CS2 config files:
 - **Network**: IPv4 addresses and hostnames with ports
 - **Values**: Numbers, booleans, and strings
 - **Comments**: Line comments starting with `//`
+
+### IntelliSense
+
+- **Autocompletion**: All ConVars and ConCommands with type hints
+- **Hover information**: Displays command name, default value, flags, and description for any command
 
 ## Installation
 
@@ -48,6 +53,7 @@ Alternatively, add this to your user settings (`Ctrl+,`):
 ## Known Issues
 
 - Some regex patterns are intentionally broad (e.g., `r_`) and may match more identifiers than intended.
+- Most commands lack metadata (default value, flags, description) due to the sheer number of ConVars and ConCommands in CS2. Contributions are welcome.
 
 ## Changelog
 
