@@ -4,54 +4,54 @@
       "name": "_record",
       "defaultValue": "cmd",
       "flags": ["cheat", "norecord", "release"],
-      "description": "Record a demo incrementally."
+      "description": ""
     },
     {
       "name": "adsp_debug",
-      "defaultValue": "",
-      "flags": [],
+      "defaultValue": 0,
+      "flags": ["a"],
       "description": ""
     },
     {
       "name": "ai_debug_dyninteractions",
-      "defaultValue": "",
-      "flags": [],
+      "defaultValue": 0,
+      "flags": ["sv", "cheat"],
       "description": ""
     },
     {
       "name": "ai_debug_los",
-      "defaultValue": "",
-      "flags": [],
+      "defaultValue": 0,
+      "flags": ["sv", "cheat"],
       "description": ""
     },
     {
       "name": "ai_debug_scripted_sequence",
-      "defaultValue": "",
-      "flags": [],
+      "defaultValue": false,
+      "flags": ["sv", "cheat"],
       "description": ""
     },
     {
       "name": "ai_debug_shoot_positions",
-      "defaultValue": "",
-      "flags": [],
+      "defaultValue": 0,
+      "flags": ["sv", "cl", "rep", "cheat"],
       "description": ""
     },
     {
       "name": "ai_disabled",
-      "defaultValue": "",
-      "flags": [],
+      "defaultValue": false,
+      "flags": ["sv", "cl", "rep", "cheat"],
       "description": ""
     },
     {
       "name": "ai_off_nav_show_nearest",
-      "defaultValue": "",
-      "flags": [],
+      "defaultValue": false,
+      "flags": ["sv", "cheat"],
       "description": ""
     },
     {
       "name": "alias",
-      "defaultValue": "",
-      "flags": [],
+      "defaultValue": "cmd",
+      "flags": ["release"],
       "description": ""
     },
     {
