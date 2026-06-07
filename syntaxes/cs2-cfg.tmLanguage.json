@@ -52,14 +52,6 @@
 				{
 					"name": "keyword.control.cs2-cfg",
 					"match": "\\b(?:pitch|yaw|messagemode2?)\\b"
-				},
-				{
-					"name": "support.function.cs2-cfg",
-					"match": "\\b(?:_record|adsp_debug|axis|battery_saver|benchframe|binddefaults|bindss|box|bug_submitter_override|button_info|callvote|camortho|cancelselect|changelevel|chicken_stop|closecaption|clutch_mode_toggle|collect_entity_model_name|create_radius_damage|CreatePredictionError|crosshair|CS_WarnFriendlyDamageInterval|custom_bot_difficulty|cvarlist|cyclevar|default_fov|developer|differences|dlight_debug|dm_togglerandomweapons|drop|echo|echoln|enable_boneflex|endmatch_votenextmap|endround|english|entity_log_load_unserialize|eom_local_player_defeat_anim_enabled|escape|firetarget|firstperson|func_break_max_pieces|global_set|god|gotv_theater_container|grep|groups|help|hideconsole|impulse|incrementvar|install_dlc_workshoptools_cvar|ip|iv_debugbone|joystick|kill|lastinv|launch_warmup_map|lobby_default_privacy_bits2|lockMoveControllerRet|menuselect|minimap_create|model_default_preview_sequence_name|motdfile|mouse_inverty|multvar|name|notarget|password|pause|pixelvis_debug|plant_bomb|quit|rate|rebuy|record|regenerate_weapon_skins|reloadgame|remove_weapon|repeat_last_console_command|restart|run_perftest|scene_playvcd|screenmessage_show|sdr|sellbackall|servercfgfile|silence_dps|sk_autoaim_mode|skel_constraints_enable|skill|speaker_config|splitscreen_mode|startdemos|steam_controller_haptics|subclass_create|teammenu|think_limit|trusted_launch|unbind|unbindall|unpause|vconsole_rcon_server_details|workshop_annotation_submit|writekeybindings|zoom_sensitivity_ratio)\\b"
-				},
-				{
-					"name": "support.function.cs2-cfg",
-					"match": "\\b(?:ai_|ammo_|anim|anotation_|auto|bot_|buddha|buy|c_|cam_|camera_|cash_|cc_|cl_|clear|commentary|con|contributionscore_|cq_|crash_|cs_|csgo_|csm_|cv_|debug|demo|dis|dota_|draw|ds|dump|engine_|ent_|exec|explode|fade|ff_|find|fish_|fog_|fov_|fps_max|fs_|g_|game|get|give|glow_|heal|host|hud_|hurt|imgui_|inferno_|input_|invnext|invprev|joy_|key_|kick|labelled_debug_helper_|lb_|list|log|m_|map|markup_group_|mat_|mesh_calculate_curvature_smooth_|mm_|mobile_fps_|molotov_|movement_stats_|mp_|nav_|navspace_|net_|next|noclip|option_|panorama_|particle_|phys_|play|print_|prop_|pulse_|pvs_|pwatch|r_|radarvi|radio|ragdoll_|range|rcon|recast_|replay_|report_|reset_|retake_|rr_|safezone|save_|say|sc_|script_|sensitivity|set|shake_|shatterglass_|show|skeleton_instance_|slot|snd_|sound|spawn_|spec_|status|stop|surf|suspicious_hit_|sv_|switchhands|sys_|telemetry_|Test_|test_|thirdperson|time|toggle|tv_|ui_|view|violence_|vis|vmix_|voice_|volume|weapon_)[_a-zA-Z0-9]*\\b"
 				}
 			]
 		},

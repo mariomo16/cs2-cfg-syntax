@@ -8,21 +8,28 @@ interface CommandInfo {
 	description?: string;
 }
 
+const TOKEN_TYPES = ["ConCommand", "ConVar"] as const;
+const legend = new vscode.SemanticTokensLegend([...TOKEN_TYPES]);
+
 const CVAR_PREFIXES: Record<string, string> = {
 	cl_: "Client ConVar",
 	sv_: "Server ConVar",
 	mp_: "Multiplayer ConVar",
 	r_: "Render ConVar",
 } as const;
-
 const PREFIX_ENTRIES = Object.entries(CVAR_PREFIXES);
-const commands = commandsJson.commands as CommandInfo[];
 
+const commands = commandsJson.commands as CommandInfo[];
 const COMMANDS_MAP = new Map<string, CommandInfo>(
 	commands.map((cmd) => [cmd.name, cmd]),
 );
 
 const COMPLETION_ITEMS = buildCompletionItems();
+
+function getTokenTypeIndex(cmd: CommandInfo): number {
+	const isCvar = PREFIX_ENTRIES.some(([prefix]) => cmd.name.startsWith(prefix));
+	return isCvar ? 1 : 0;
+}
 
 function buildCommandMarkdown(cmd: CommandInfo): vscode.MarkdownString {
 	const md = new vscode.MarkdownString();
@@ -63,6 +70,41 @@ function buildCompletionItems(): vscode.CompletionItem[] {
 }
 
 export function activate(context: vscode.ExtensionContext): void {
+	const semanticProvider =
+		vscode.languages.registerDocumentSemanticTokensProvider(
+			"cs2-cfg",
+			{
+				provideDocumentSemanticTokens(document: vscode.TextDocument) {
+					const builder = new vscode.SemanticTokensBuilder(legend);
+
+					for (let lineIndex = 0; lineIndex < document.lineCount; lineIndex++) {
+						const line = document.lineAt(lineIndex).text;
+						const wordRegex = /[\w_]+/g;
+
+						for (
+							let match = wordRegex.exec(line);
+							match !== null;
+							match = wordRegex.exec(line)
+						) {
+							const word = match[0];
+							const cmd = COMMANDS_MAP.get(word);
+							if (cmd) {
+								builder.push(
+									lineIndex,
+									match.index,
+									word.length,
+									getTokenTypeIndex(cmd),
+								);
+							}
+						}
+					}
+
+					return builder.build();
+				},
+			},
+			legend,
+		);
+
 	const completionProvider = vscode.languages.registerCompletionItemProvider(
 		"cs2-cfg",
 		{
@@ -87,7 +129,11 @@ export function activate(context: vscode.ExtensionContext): void {
 		},
 	});
 
-	context.subscriptions.push(completionProvider, hoverProvider);
+	context.subscriptions.push(
+		semanticProvider,
+		completionProvider,
+		hoverProvider,
+	);
 }
 
 export function deactivate(): void {}
