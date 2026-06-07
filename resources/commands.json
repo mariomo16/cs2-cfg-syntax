@@ -2,7 +2,7 @@
   "commands": [
     {
       "name": "_record",
-      "defaultValue": "",
+      "defaultValue": "cmd",
       "flags": ["cheat", "norecord", "release"],
       "description": "Record a demo incrementally."
     },
