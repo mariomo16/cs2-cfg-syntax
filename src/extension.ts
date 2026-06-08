@@ -43,7 +43,7 @@ function buildCompletionItems(): vscode.CompletionItem[] {
 				? vscode.CompletionItemKind.Function
 				: vscode.CompletionItemKind.Variable,
 		);
-		item.detail = isConCommand ? "ConCommand" : "Cvar";
+		item.detail = isConCommand ? "ConCommand" : "ConVar";
 
 		if (cmd.description || cmd.flags?.length)
 			item.documentation = buildCommandMarkdown(cmd);
