@@ -11,14 +11,6 @@ interface CommandInfo {
 const TOKEN_TYPES = ["ConCommand", "ConVar"] as const;
 const legend = new vscode.SemanticTokensLegend([...TOKEN_TYPES]);
 
-const CVAR_PREFIXES: Record<string, string> = {
-	cl_: "Client ConVar",
-	sv_: "Server ConVar",
-	mp_: "Multiplayer ConVar",
-	r_: "Render ConVar",
-} as const;
-const PREFIX_ENTRIES = Object.entries(CVAR_PREFIXES);
-
 const commands = cvarsJson.commands as CommandInfo[];
 const COMMANDS_MAP = new Map<string, CommandInfo>(
 	commands.map((cmd) => [cmd.name, cmd]),
@@ -41,25 +33,17 @@ function buildCommandMarkdown(cmd: CommandInfo): vscode.MarkdownString {
 	return md;
 }
 
-function resolveCommandKindAndDetail(name: string): {
-	kind: vscode.CompletionItemKind;
-	detail: string;
-} {
-	const match = PREFIX_ENTRIES.find(([prefix]) => name.startsWith(prefix));
-
-	return {
-		kind: match
-			? vscode.CompletionItemKind.Variable
-			: vscode.CompletionItemKind.Function,
-		detail: match ? match[1] : "ConCommand",
-	};
-}
-
 function buildCompletionItems(): vscode.CompletionItem[] {
 	return commands.map((cmd) => {
-		const { kind, detail } = resolveCommandKindAndDetail(cmd.name);
-		const item = new vscode.CompletionItem(cmd.name, kind);
-		item.detail = detail;
+		const isConCommand = cmd.defaultValue === "cmd" ? 1 : 0;
+
+		const item = new vscode.CompletionItem(
+			cmd.name,
+			isConCommand
+				? vscode.CompletionItemKind.Function
+				: vscode.CompletionItemKind.Variable,
+		);
+		item.detail = isConCommand ? "ConCommand" : "Cvar";
 
 		if (cmd.description || cmd.flags?.length)
 			item.documentation = buildCommandMarkdown(cmd);
