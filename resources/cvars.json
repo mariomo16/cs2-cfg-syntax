@@ -7,6 +7,114 @@
 			"description": ""
 		},
 		{
+			"name": "-cl_show_team_equipment",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-lookatweapon",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-quickbuyradial",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-quickgrenaderadial",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-quickinv",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-radialradio",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-radialradio2",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-radialradio3",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-spray_menu",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+cl_show_team_equipment",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+lookatweapon",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+quickbuyradial",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+quickgrenaderadial",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+quickinv",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+radialradio",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+radialradio2",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+radialradio3",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+spray_menu",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
 			"name": "adsp_debug",
 			"defaultValue": "",
 			"flags": ["a"],
