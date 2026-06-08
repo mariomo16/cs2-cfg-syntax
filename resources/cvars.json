@@ -16010,7 +16010,7 @@
 		},
 		{
 			"name": "volume_fog_debug_volumes",
-			"defaultValue": false,
+			"defaultValue": "",
 			"flags": ["cheat"],
 			"description": ""
 		},
