@@ -8,25 +8,25 @@
 		},
 		{
 			"name": "adsp_debug",
-			"defaultValue": 0,
+			"defaultValue": "",
 			"flags": ["a"],
 			"description": ""
 		},
 		{
 			"name": "ai_debug_dyninteractions",
-			"defaultValue": 0,
+			"defaultValue": "",
 			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "ai_debug_los",
-			"defaultValue": 0,
+			"defaultValue": "",
 			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "ai_debug_scripted_sequence",
-			"defaultValue": false,
+			"defaultValue": "",
 			"flags": ["sv", "cheat"],
 			"description": ""
 		},
@@ -38,13 +38,13 @@
 		},
 		{
 			"name": "ai_disabled",
-			"defaultValue": false,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "ai_off_nav_show_nearest",
-			"defaultValue": false,
+			"defaultValue": "",
 			"flags": ["sv", "cheat"],
 			"description": ""
 		},
@@ -16028,79 +16028,79 @@
 		},
 		{
 			"name": "weapon_accuracy_forcespread",
-			"defaultValue": 0,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "release"],
 			"description": "Force spread to the specified value."
 		},
 		{
 			"name": "weapon_accuracy_nospread",
-			"defaultValue": false,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "release"],
 			"description": "Disable weapon inaccuracy spread"
 		},
 		{
 			"name": "weapon_accuracy_reset_on_deploy",
-			"defaultValue": false,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "cheat", "release"],
 			"description": "On deploy, forcibly reset weapon accuracy to zero."
 		},
 		{
 			"name": "weapon_accuracy_shotgun_spread_patterns",
-			"defaultValue": true,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "release"],
 			"description": ""
 		},
 		{
 			"name": "weapon_accuracy_stack_boost_limit",
-			"defaultValue": 2,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "release"],
 			"description": "Apply ladder inaccuracy to players boosted by a stack of this many (or more) players"
 		},
 		{
 			"name": "weapon_air_spread_scale",
-			"defaultValue": 1,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "release"],
 			"description": "Scale factor for jumping inaccuracy, set to 0 to make jumping accuracy equal to standing"
 		},
 		{
 			"name": "weapon_auto_cleanup_time",
-			"defaultValue": 0,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "release"],
 			"description": "If set to non-zero, weapons will delete themselves after the specified time (in seconds) if no players are near."
 		},
 		{
 			"name": "weapon_debug_spread_gap",
-			"defaultValue": 0.67,
+			"defaultValue": "",
 			"flags": ["cl", "cheat", "per_user"],
 			"description": ""
 		},
 		{
 			"name": "weapon_debug_spread_show",
-			"defaultValue": 0,
+			"defaultValue": "",
 			"flags": ["cl", "cheat", "per_user"],
 			"description": "Enables display of weapon accuracy; 1: show accuracy box, 3: show accuracy with dynamic crosshair"
 		},
 		{
 			"name": "weapon_max_before_cleanup",
-			"defaultValue": 10,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "release"],
 			"description": "If set to non-zero, will remove the oldest dropped weapon to maintain the specified number of dropped weapons in the world."
 		},
 		{
 			"name": "weapon_near_empty_sound",
-			"defaultValue": true,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "weapon_reticle_knife_show",
-			"defaultValue": true,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "release"],
 			"description": "When enabled will show knife reticle on clients. Used for game modes requiring target id display when holding a knife."
 		},
 		{
 			"name": "weapon_sound_falloff_multiplier",
-			"defaultValue": 1,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "cheat", "release"],
 			"description": "Scaling for falloff of weapon firing sounds"
 		},
@@ -16118,7 +16118,7 @@
 		},
 		{
 			"name": "zoom_sensitivity_ratio",
-			"defaultValue": 1,
+			"defaultValue": "",
 			"flags": ["cl", "a", "per_user"],
 			"description": "Additional mouse sensitivity scale factor applied when FOV is zoomed in."
 		}
