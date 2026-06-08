@@ -11,7 +11,7 @@ interface CommandInfo {
 const TOKEN_TYPES = ["ConCommand", "ConVar"] as const;
 const legend = new vscode.SemanticTokensLegend([...TOKEN_TYPES]);
 
-const commands = cvarsJson.commands as CommandInfo[];
+const commands = cvarsJson.cvarlist as CommandInfo[];
 const COMMANDS_MAP = new Map<string, CommandInfo>(
 	commands.map((cmd) => [cmd.name, cmd]),
 );
