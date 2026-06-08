@@ -15429,410 +15429,416 @@
 		{
 			"name": "ui_deepstats_radio_heat_figurine",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_deepstats_radio_heat_tab",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_deepstats_radio_heat_team",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_deepstats_toplevel_mode",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_inspect_bkgnd_map_C2AEBB5E",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "release"],
+			"description": "Inspect background map"
 		},
 		{
 			"name": "ui_inventorysettings_recently_acknowledged",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_lobby_draft_enabled",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_mainmenu_bkgnd_movie_C2AEBB5E",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "release"],
+			"description": "Main menu background movie"
 		},
 		{
 			"name": "ui_nearbylobbies_filter3",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_news_last_read_link",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_news_last_read_link2",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_notification_tb_snooze",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_party_msg_sound_enabled",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "release"],
+			"description": "When enabled, lobby messages will play a short sound"
 		},
 		{
 			"name": "ui_playsettings_custom_preset",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_directchallengekey",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_casual",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_competitive",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_cooperative",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_deathmatch",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_retakes",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_scrimcomp2v2",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_skirmish",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_survival",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_casual",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_competitive",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_cooperative",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_deathmatch",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_retakes",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_scrimcomp2v2",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_skirmish",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_survival",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_listen_annotations",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_listen_grenades",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_listen_infammo",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_listen_infwarmup",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_casual",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_competitive",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_deathmatch",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_gungameprogressive",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_retakes",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_scrimcomp2v2",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_official_casual",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
+			"description": ""
+		},
+		{
+			"name": "ui_playsettings_maps_official_competitive",
+			"defaultValue": "",
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_official_deathmatch",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_official_gungameprogressive",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_official_retakes",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_workshop",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_mode_listen",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_mode_official_v20",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_survival_solo",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_warmup_map_name",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_popup_weaponupdate_version",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_render_task_clips_label",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_render_task_file",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_render_task_fps",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_render_task_generate_clips",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_setting_advertiseforhire_auto",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "release"],
+			"description": "Whether users will automatically advertise for invites (0: off; 1: last; 2: auto)"
 		},
 		{
 			"name": "ui_setting_advertiseforhire_auto_last",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "release"],
+			"description": "Which game mode users last used to advertise for invites"
 		},
 		{
 			"name": "ui_show_subscription_alert",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_show_unlock_competitive_alert",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_steam_overlay_notification_position",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a"],
+			"description": "Steam overlay notification position"
 		},
 		{
 			"name": "ui_steam_overlay_notification_position_horz",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a"],
+			"description": "Steam overlay notification position horizontal offset"
 		},
 		{
 			"name": "ui_steam_overlay_notification_position_vert",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a"],
+			"description": "Steam overlay notification position vertical offset"
 		},
 		{
 			"name": "ui_vanitysetting_loadoutslot_ct",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_vanitysetting_loadoutslot_t",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_vanitysetting_team",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "unbind",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["release"],
+			"description": "Unbind a key."
 		},
 		{
 			"name": "unbindall",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["release"],
+			"description": "Unbind all keys."
 		},
 		{
 			"name": "unpause",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["release"],
+			"description": "Clear the pause state of the server."
 		},
 		{
 			"name": "vconsole_rcon_server_details",
