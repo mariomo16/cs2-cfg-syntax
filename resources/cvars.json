@@ -15837,193 +15837,193 @@
 		{
 			"name": "vconsole_rcon_server_details",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["norecord", "release", "server_cant_query"],
+			"description": "when non-empty allows for easy vconsole connection to the dedicated server."
 		},
 		{
 			"name": "view_punch_decay",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["sv", "cl", "rep", "cheat", "release"],
+			"description": "Decay factor exponent for view punch"
 		},
 		{
 			"name": "viewmodel_fov",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "user", "per_user"],
+			"description": "Viewmodel FOV"
 		},
 		{
 			"name": "viewmodel_offset_x",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "user", "per_user"],
+			"description": "viewmodel_offset_x"
 		},
 		{
 			"name": "viewmodel_offset_y",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "user", "per_user"],
+			"description": "viewmodel_offset_y"
 		},
 		{
 			"name": "viewmodel_offset_z",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "user", "per_user"],
+			"description": "viewmodel_offset_z"
 		},
 		{
 			"name": "viewmodel_presetpos",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a"],
+			"description": "1:'Desktop', 2:'Classic'"
 		},
 		{
 			"name": "violence_ablood",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["a"],
+			"description": "Draw alien blood"
 		},
 		{
 			"name": "violence_agibs",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["a"],
+			"description": "Show alien gib entities"
 		},
 		{
 			"name": "violence_hblood",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["a"],
+			"description": "Draw human blood"
 		},
 		{
 			"name": "violence_hgibs",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["a"],
+			"description": "Show human gib entities"
 		},
 		{
 			"name": "vis_force",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "vismon_poll_frequency",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "vismon_trace_limit",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "vmix_input",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["cheat"],
+			"description": "Set an input mix value"
 		},
 		{
 			"name": "vmix_output",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["cheat"],
+			"description": "Dump main graph control output values"
 		},
 		{
 			"name": "voice_always_sample_mic",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["a"],
+			"description": "When enabled, open the voip audio input stream when the application launches."
 		},
 		{
 			"name": "voice_device_override",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "#OS_Default_Device",
+			"flags": ["a", "release"],
+			"description": "Default device used for voice capture."
 		},
 		{
 			"name": "voice_input_stallout",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["user"],
+			"description": "Time before we consider a mic stalled out and need to reset it."
 		},
 		{
 			"name": "voice_loopback",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["user"],
 			"description": ""
 		},
 		{
 			"name": "voice_loopback_no_networking",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["user"],
 			"description": ""
 		},
 		{
 			"name": "voice_modenable",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "release", "clientcmd_can_execute"],
+			"description": "Enable/disable voice in this mod."
 		},
 		{
 			"name": "voice_modenable_toggle",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": "Toggle the voice_modenable convar."
 		},
 		{
 			"name": "voice_player_speaking_delay_threshold",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "voice_test_log_send",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["release"],
 			"description": ""
 		},
 		{
 			"name": "voice_threshold",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a"],
+			"description": "decibel threshold for how loud the talker's input signal is before we think they are talking."
 		},
 		{
 			"name": "voice_toggle_open_mic",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": "Toggles between open-mic and push-to-talk"
 		},
 		{
 			"name": "voice_vox",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "per_user"],
+			"description": "Voice chat uses a vox-style always on"
 		},
 		{
 			"name": "volume",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["a"],
+			"description": "Sound volume"
 		},
 		{
 			"name": "volume_fog_debug_volumes",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": false,
+			"flags": ["cheat"],
 			"description": ""
 		},
 		{
 			"name": "volume_fog_dither_scale",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cheat"],
 			"description": ""
 		},
 		{
 			"name": "volume_fog_enable_jitter",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cheat"],
 			"description": ""
 		},
 		{
