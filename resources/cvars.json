@@ -16118,9 +16118,9 @@
 		},
 		{
 			"name": "zoom_sensitivity_ratio",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 1,
+			"flags": ["cl", "a", "per_user"],
+			"description": "Additional mouse sensitivity scale factor applied when FOV is zoomed in."
 		}
 	]
 }
