@@ -27,8 +27,7 @@ const COMMANDS_MAP = new Map<string, CommandInfo>(
 const COMPLETION_ITEMS = buildCompletionItems();
 
 function getTokenTypeIndex(cmd: CommandInfo): number {
-	const isCvar = PREFIX_ENTRIES.some(([prefix]) => cmd.name.startsWith(prefix));
-	return isCvar ? 1 : 0;
+	return cmd.defaultValue === "cmd" ? 1 : 0;
 }
 
 function buildCommandMarkdown(cmd: CommandInfo): vscode.MarkdownString {
