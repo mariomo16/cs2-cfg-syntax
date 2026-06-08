@@ -16028,93 +16028,93 @@
 		},
 		{
 			"name": "weapon_accuracy_forcespread",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 0,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "Force spread to the specified value."
 		},
 		{
 			"name": "weapon_accuracy_nospread",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": false,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "Disable weapon inaccuracy spread"
 		},
 		{
 			"name": "weapon_accuracy_reset_on_deploy",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": false,
+			"flags": ["sv", "cl", "rep", "cheat", "release"],
+			"description": "On deploy, forcibly reset weapon accuracy to zero."
 		},
 		{
 			"name": "weapon_accuracy_shotgun_spread_patterns",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": true,
+			"flags": ["sv", "cl", "rep", "release"],
 			"description": ""
 		},
 		{
 			"name": "weapon_accuracy_stack_boost_limit",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 2,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "Apply ladder inaccuracy to players boosted by a stack of this many (or more) players"
 		},
 		{
 			"name": "weapon_air_spread_scale",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 1,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "Scale factor for jumping inaccuracy, set to 0 to make jumping accuracy equal to standing"
 		},
 		{
 			"name": "weapon_auto_cleanup_time",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 0,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "If set to non-zero, weapons will delete themselves after the specified time (in seconds) if no players are near."
 		},
 		{
 			"name": "weapon_debug_spread_gap",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": 0.67,
+			"flags": ["cl", "cheat", "per_user"],
 			"description": ""
 		},
 		{
 			"name": "weapon_debug_spread_show",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 0,
+			"flags": ["cl", "cheat", "per_user"],
+			"description": "Enables display of weapon accuracy; 1: show accuracy box, 3: show accuracy with dynamic crosshair"
 		},
 		{
 			"name": "weapon_max_before_cleanup",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 10,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "If set to non-zero, will remove the oldest dropped weapon to maintain the specified number of dropped weapons in the world."
 		},
 		{
 			"name": "weapon_near_empty_sound",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": true,
+			"flags": ["sv", "cl", "rep", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "weapon_reticle_knife_show",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": true,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "When enabled will show knife reticle on clients. Used for game modes requiring target id display when holding a knife."
 		},
 		{
 			"name": "weapon_sound_falloff_multiplier",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 1,
+			"flags": ["sv", "cl", "rep", "cheat", "release"],
+			"description": "Scaling for falloff of weapon firing sounds"
 		},
 		{
 			"name": "workshop_annotation_submit",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": "Submit annotation to workshop. To update an existing submission add its ID number from the workshop URL as a second argument."
 		},
 		{
 			"name": "writekeybindings",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["release"],
+			"description": "Saves current key bindings to disk."
 		},
 		{
 			"name": "zoom_sensitivity_ratio",
