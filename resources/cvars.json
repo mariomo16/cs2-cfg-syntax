@@ -511,6 +511,12 @@
 			"description": ""
 		},
 		{
+			"name": "bot_hurt",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
 			"name": "bot_ignore_enemies",
 			"defaultValue": "",
 			"flags": [],
