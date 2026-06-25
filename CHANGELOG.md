@@ -5,6 +5,21 @@ All notable changes to the "CS2 Config Support" extension will be documented in 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-06-25
+
+### Changed
+
+- Command and console variable (ConVar/ConCommand) classification now relies on the `defaultValue` field instead of name prefixes (`cl_`, `sv_`, `mp_`, `r_`), improving detection accuracy.
+- Completion item details now show "Command" or "Console Variable" instead of the prefix-based category (e.g. "Client ConVar", "Server ConVar").
+
+### Added
+
+- When a command has no description, a fallback help text is now generated automatically, suggesting the use of `help <command>` in the in-game console.
+
+### Data
+
+- Filled in `defaultValue`, `flags`, and `description` fields for several commands in `commands.json`, improving hover and completion accuracy.
+
 ## [1.2.0] - 2026-06-07
 
 ### Added
