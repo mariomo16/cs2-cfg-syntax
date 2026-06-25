@@ -1,6 +1,6 @@
 # CS2 Config Support for Visual Studio Code
 
-Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all ConVars & ConCommands as of May 19, 2026.
+Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all ConVars & ConCommands (I hope) as of May 25, 2026.
 
 > Partial backward compatibility with CS:GO `.cfg` files.
 
