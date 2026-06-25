@@ -46,8 +46,7 @@
 		]
 	},
 	"scripts": {
-		"build": "tsc -p ./",
-		"watch": "tsc -watch -p ./"
+		"build": "tsc -p ./"
 	},
 	"repository": {
 		"type": "git",
