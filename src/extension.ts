@@ -28,7 +28,7 @@ function buildCommandMarkdown(cmd: CommandInfo): vscode.MarkdownString {
 
 function buildCompletionItems(): vscode.CompletionItem[] {
 	return commands.map((cmd) => {
-		const isConCommand = cmd.defaultValue === "cmd" ? 1 : 0;
+		const isConCommand = cmd.defaultValue === "cmd";
 
 		const item = new vscode.CompletionItem(
 			cmd.name,
