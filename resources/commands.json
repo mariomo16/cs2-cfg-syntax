@@ -4,29 +4,137 @@
 			"name": "_record",
 			"defaultValue": "cmd",
 			"flags": ["cheat", "norecord", "release"],
+			"description": "Record a demo incrementally."
+		},
+		{
+			"name": "-cl_show_team_equipment",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-lookatweapon",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-quickbuyradial",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-quickgrenaderadial",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-quickinv",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-radialradio",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-radialradio2",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-radialradio3",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "-spray_menu",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+cl_show_team_equipment",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+lookatweapon",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+quickbuyradial",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+quickgrenaderadial",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+quickinv",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+radialradio",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+radialradio2",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+radialradio3",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": ""
+		},
+		{
+			"name": "+spray_menu",
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
 			"description": ""
 		},
 		{
 			"name": "adsp_debug",
-			"defaultValue": 0,
+			"defaultValue": "",
 			"flags": ["a"],
 			"description": ""
 		},
 		{
 			"name": "ai_debug_dyninteractions",
-			"defaultValue": 0,
+			"defaultValue": "",
 			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "ai_debug_los",
-			"defaultValue": 0,
+			"defaultValue": "",
 			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "ai_debug_scripted_sequence",
-			"defaultValue": false,
+			"defaultValue": "",
 			"flags": ["sv", "cheat"],
 			"description": ""
 		},
@@ -38,13 +146,13 @@
 		},
 		{
 			"name": "ai_disabled",
-			"defaultValue": false,
+			"defaultValue": "",
 			"flags": ["sv", "cl", "rep", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "ai_off_nav_show_nearest",
-			"defaultValue": false,
+			"defaultValue": "",
 			"flags": ["sv", "cheat"],
 			"description": ""
 		},
@@ -506,6 +614,12 @@
 		},
 		{
 			"name": "bot_goto_selected",
+			"defaultValue": "",
+			"flags": [],
+			"description": ""
+		},
+		{
+			"name": "bot_hurt",
 			"defaultValue": "",
 			"flags": [],
 			"description": ""
@@ -5690,45 +5804,45 @@
 		},
 		{
 			"name": "key_findbinding",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["release"],
+			"description": "Find key bound to specified command string."
 		},
 		{
 			"name": "key_listboundkeys",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["release"],
+			"description": "List bound keys with bindings."
 		},
 		{
 			"name": "kick",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["norecord", "release"],
+			"description": "Kick a player by name."
 		},
 		{
 			"name": "kickid",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["norecord", "release"],
+			"description": "Kick a player by userid or uniqueid, with a message."
 		},
 		{
 			"name": "kickid_hltv",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["norecord", "release"],
+			"description": "Kick a player by userid or uniqueid, with a message."
 		},
 		{
 			"name": "kill",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["sv", "cheat"],
+			"description": "Kills the player with generic damage"
 		},
 		{
 			"name": "killvector",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["sv", "cheat"],
+			"description": "Kills a player applying force. Usage: killvector <player> <x value> <y value> <z value>"
 		},
 		{
 			"name": "labelled_debug_helper_arc_segments",
@@ -9548,15 +9662,15 @@
 		},
 		{
 			"name": "option_duck_method",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": false,
+			"flags": ["cl", "a", "user", "per_user"],
+			"description": "Input toggle control"
 		},
 		{
 			"name": "option_speed_method",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": false,
+			"flags": ["cl", "a", "user", "per_user"],
+			"description": "Input toggle control"
 		},
 		{
 			"name": "panorama_console_position_and_size",
@@ -9908,9 +10022,9 @@
 		},
 		{
 			"name": "quit",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["release", "vconsole_set_focus"],
+			"description": "Quit the game"
 		},
 		{
 			"name": "r_AirboatViewDampenDamp",
@@ -15423,698 +15537,704 @@
 		{
 			"name": "ui_deepstats_radio_heat_figurine",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_deepstats_radio_heat_tab",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_deepstats_radio_heat_team",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_deepstats_toplevel_mode",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_inspect_bkgnd_map_C2AEBB5E",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "release"],
+			"description": "Inspect background map"
 		},
 		{
 			"name": "ui_inventorysettings_recently_acknowledged",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_lobby_draft_enabled",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_mainmenu_bkgnd_movie_C2AEBB5E",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "release"],
+			"description": "Main menu background movie"
 		},
 		{
 			"name": "ui_nearbylobbies_filter3",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_news_last_read_link",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_news_last_read_link2",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_notification_tb_snooze",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_party_msg_sound_enabled",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "release"],
+			"description": "When enabled, lobby messages will play a short sound"
 		},
 		{
 			"name": "ui_playsettings_custom_preset",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_directchallengekey",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_casual",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_competitive",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_cooperative",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_deathmatch",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_retakes",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_scrimcomp2v2",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_skirmish",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_listen_survival",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_casual",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_competitive",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_cooperative",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_deathmatch",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_retakes",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_scrimcomp2v2",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_skirmish",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_flags_official_survival",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_listen_annotations",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_listen_grenades",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_listen_infammo",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_listen_infwarmup",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_casual",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_competitive",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_deathmatch",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_gungameprogressive",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_retakes",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_listen_scrimcomp2v2",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_official_casual",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
+			"description": ""
+		},
+		{
+			"name": "ui_playsettings_maps_official_competitive",
+			"defaultValue": "",
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_official_deathmatch",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_official_gungameprogressive",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_official_retakes",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_maps_workshop",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_mode_listen",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_mode_official_v20",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_survival_solo",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_playsettings_warmup_map_name",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_popup_weaponupdate_version",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_render_task_clips_label",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_render_task_file",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_render_task_fps",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_render_task_generate_clips",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_setting_advertiseforhire_auto",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "release"],
+			"description": "Whether users will automatically advertise for invites (0: off; 1: last; 2: auto)"
 		},
 		{
 			"name": "ui_setting_advertiseforhire_auto_last",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a", "release"],
+			"description": "Which game mode users last used to advertise for invites"
 		},
 		{
 			"name": "ui_show_subscription_alert",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_show_unlock_competitive_alert",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_steam_overlay_notification_position",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a"],
+			"description": "Steam overlay notification position"
 		},
 		{
 			"name": "ui_steam_overlay_notification_position_horz",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a"],
+			"description": "Steam overlay notification position horizontal offset"
 		},
 		{
 			"name": "ui_steam_overlay_notification_position_vert",
 			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"flags": ["cl", "a"],
+			"description": "Steam overlay notification position vertical offset"
 		},
 		{
 			"name": "ui_vanitysetting_loadoutslot_ct",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_vanitysetting_loadoutslot_t",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "ui_vanitysetting_team",
 			"defaultValue": "",
-			"flags": [],
+			"flags": ["cl", "a", "release"],
 			"description": ""
 		},
 		{
 			"name": "unbind",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["release"],
+			"description": "Unbind a key."
 		},
 		{
 			"name": "unbindall",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["release"],
+			"description": "Unbind all keys."
 		},
 		{
 			"name": "unpause",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["release"],
+			"description": "Clear the pause state of the server."
 		},
 		{
 			"name": "vconsole_rcon_server_details",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 0,
+			"flags": ["norecord", "release", "server_cant_query"],
+			"description": "when non-empty allows for easy vconsole connection to the dedicated server."
 		},
 		{
 			"name": "view_punch_decay",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 18,
+			"flags": ["sv", "cl", "rep", "cheat", "release"],
+			"description": "Decay factor exponent for view punch"
 		},
 		{
 			"name": "viewmodel_fov",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 60,
+			"flags": ["cl", "a", "user", "per_user"],
+			"description": "Viewmodel FOV"
 		},
 		{
 			"name": "viewmodel_offset_x",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 1,
+			"flags": ["cl", "a", "user", "per_user"],
+			"description": "viewmodel_offset_x"
 		},
 		{
 			"name": "viewmodel_offset_y",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 1,
+			"flags": ["cl", "a", "user", "per_user"],
+			"description": "viewmodel_offset_y"
 		},
 		{
 			"name": "viewmodel_offset_z",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": -1,
+			"flags": ["cl", "a", "user", "per_user"],
+			"description": "viewmodel_offset_z"
 		},
 		{
 			"name": "viewmodel_presetpos",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 1,
+			"flags": ["cl", "a"],
+			"description": "1:'Desktop', 2:'Classic'"
 		},
 		{
 			"name": "violence_ablood",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": true,
+			"flags": ["a"],
+			"description": "Draw alien blood"
 		},
 		{
 			"name": "violence_agibs",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": true,
+			"flags": ["a"],
+			"description": "Show alien gib entities"
 		},
 		{
 			"name": "violence_hblood",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": true,
+			"flags": ["a"],
+			"description": "Draw human blood"
 		},
 		{
 			"name": "violence_hgibs",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": true,
+			"flags": ["a"],
+			"description": "Show human gib entities"
 		},
 		{
 			"name": "vis_force",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": false,
+			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "vismon_poll_frequency",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": 0.5,
+			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "vismon_trace_limit",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": 12,
+			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "vmix_input",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["cheat"],
+			"description": "Set an input mix value"
 		},
 		{
 			"name": "vmix_output",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["cheat"],
+			"description": "Dump main graph control output values"
 		},
 		{
 			"name": "voice_always_sample_mic",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": false,
+			"flags": ["a"],
+			"description": "When enabled, open the voip audio input stream when the application launches."
 		},
 		{
 			"name": "voice_device_override",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "#OS_Default_Device",
+			"flags": ["a", "release"],
+			"description": "Default device used for voice capture."
 		},
 		{
 			"name": "voice_input_stallout",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 2,
+			"flags": ["user"],
+			"description": "Time before we consider a mic stalled out and need to reset it."
 		},
 		{
 			"name": "voice_loopback",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": false,
+			"flags": ["user"],
 			"description": ""
 		},
 		{
 			"name": "voice_loopback_no_networking",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": false,
+			"flags": ["user"],
 			"description": ""
 		},
 		{
 			"name": "voice_modenable",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": true,
+			"flags": ["cl", "a", "release", "clientcmd_can_execute"],
+			"description": "Enable/disable voice in this mod."
 		},
 		{
 			"name": "voice_modenable_toggle",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": "Toggle the voice_modenable convar."
 		},
 		{
 			"name": "voice_player_speaking_delay_threshold",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": 0.5,
+			"flags": ["sv", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "voice_test_log_send",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": false,
+			"flags": ["release"],
 			"description": ""
 		},
 		{
 			"name": "voice_threshold",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": -120,
+			"flags": ["cl", "a"],
+			"description": "decibel threshold for how loud the talker's input signal is before we think they are talking."
 		},
 		{
 			"name": "voice_toggle_open_mic",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": "Toggles between open-mic and push-to-talk"
 		},
 		{
 			"name": "voice_vox",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 0,
+			"flags": ["cl", "a", "per_user"],
+			"description": "Voice chat uses a vox-style always on"
 		},
 		{
 			"name": "volume",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 1,
+			"flags": ["a"],
+			"description": "Sound volume"
 		},
 		{
 			"name": "volume_fog_debug_volumes",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": false,
+			"flags": ["cheat"],
 			"description": ""
 		},
 		{
 			"name": "volume_fog_dither_scale",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": 1,
+			"flags": ["cheat"],
 			"description": ""
 		},
 		{
 			"name": "volume_fog_enable_jitter",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": true,
+			"flags": ["cheat"],
 			"description": ""
 		},
 		{
 			"name": "weapon_accuracy_forcespread",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 0,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "Force spread to the specified value."
 		},
 		{
 			"name": "weapon_accuracy_nospread",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": false,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "Disable weapon inaccuracy spread"
 		},
 		{
 			"name": "weapon_accuracy_reset_on_deploy",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": false,
+			"flags": ["sv", "cl", "rep", "cheat", "release"],
+			"description": "On deploy, forcibly reset weapon accuracy to zero."
 		},
 		{
 			"name": "weapon_accuracy_shotgun_spread_patterns",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": true,
+			"flags": ["sv", "cl", "rep", "release"],
 			"description": ""
 		},
 		{
 			"name": "weapon_accuracy_stack_boost_limit",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 2,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "Apply ladder inaccuracy to players boosted by a stack of this many (or more) players"
 		},
 		{
 			"name": "weapon_air_spread_scale",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 1,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "Scale factor for jumping inaccuracy, set to 0 to make jumping accuracy equal to standing"
 		},
 		{
 			"name": "weapon_auto_cleanup_time",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 0,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "If set to non-zero, weapons will delete themselves after the specified time (in seconds) if no players are near."
 		},
 		{
 			"name": "weapon_debug_spread_gap",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": 0.67,
+			"flags": ["cl", "cheat", "per_user"],
 			"description": ""
 		},
 		{
 			"name": "weapon_debug_spread_show",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 0,
+			"flags": ["cl", "cheat", "per_user"],
+			"description": "Enables display of weapon accuracy; 1: show accuracy box, 3: show accuracy with dynamic crosshair"
 		},
 		{
 			"name": "weapon_max_before_cleanup",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 0,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "If set to non-zero, will remove the oldest dropped weapon to maintain the specified number of dropped weapons in the world."
 		},
 		{
 			"name": "weapon_near_empty_sound",
-			"defaultValue": "",
-			"flags": [],
+			"defaultValue": true,
+			"flags": ["sv", "cl", "rep", "cheat"],
 			"description": ""
 		},
 		{
 			"name": "weapon_reticle_knife_show",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": true,
+			"flags": ["sv", "cl", "rep", "release"],
+			"description": "When enabled will show knife reticle on clients. Used for game modes requiring target id display when holding a knife."
 		},
 		{
 			"name": "weapon_sound_falloff_multiplier",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 1,
+			"flags": ["sv", "cl", "rep", "cheat", "release"],
+			"description": "Scaling for falloff of weapon firing sounds"
 		},
 		{
 			"name": "workshop_annotation_submit",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["cl", "release"],
+			"description": "Submit annotation to workshop. To update an existing submission add its ID number from the workshop URL as a second argument."
 		},
 		{
 			"name": "writekeybindings",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": "cmd",
+			"flags": ["release"],
+			"description": "Saves current key bindings to disk."
 		},
 		{
 			"name": "zoom_sensitivity_ratio",
-			"defaultValue": "",
-			"flags": [],
-			"description": ""
+			"defaultValue": 1,
+			"flags": ["cl", "a", "per_user"],
+			"description": "Additional mouse sensitivity scale factor applied when FOV is zoomed in."
 		}
 	]
 }
