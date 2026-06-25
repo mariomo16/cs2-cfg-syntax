@@ -1,6 +1,6 @@
 # CS2 Config Support for Visual Studio Code
 
-Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all ConVars & ConCommands (I hope) as of May 25, 2026.
+Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all ConVars & Commands (I hope) as of May 25, 2026.
 
 > Partial backward compatibility with CS:GO `.cfg` files.
 
@@ -20,7 +20,7 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 
 ### Syntax Highlighting
 
-- **ConVars & ConCommands**: All current console commands and variables (e.g., `sensitivity`)
+- **ConVars & Commands**: All current console commands and variables (e.g., `sensitivity`)
 - **Aliases**: Custom alias definitions with highlighted names
 - **Keybinds**: All keys, mouse buttons, and scancodes
 - **Maps & Weapons**: Map names (`de_cache`, `cs_italy`) and weapon identifiers
@@ -30,7 +30,7 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 
 ### IntelliSense
 
-- **Autocompletion**: All ConVars and ConCommands with type hints
+- **Autocompletion**: All ConVars and Commands with type hints
 - **Hover information**: Displays command name, default value, flags, and description for any command
 
 ## Installation
