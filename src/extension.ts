@@ -9,19 +9,21 @@ interface CommandInfo {
 }
 
 const commands = commandsJson.commands as CommandInfo[];
-const COMMANDS_MAP = new Map<string, CommandInfo>(
-	commands.map((cmd) => [cmd.name, cmd]),
-);
-
+const COMMANDS_MAP = new Map<string, vscode.MarkdownString>();
 const COMPLETION_ITEMS = buildCompletionItems();
 
 function buildCommandMarkdown(cmd: CommandInfo): vscode.MarkdownString {
 	const md = new vscode.MarkdownString();
-
 	md.appendMarkdown(`**${cmd.name}**\n\n`);
-	if (cmd.description) md.appendMarkdown(`${cmd.description}\n\n`);
-	if (cmd.flags?.length)
+
+	const description =
+		cmd.description ||
+		`Type 'help ${cmd.name}' in the in-game console to get more info.`;
+	md.appendMarkdown(`${description}\n\n`);
+
+	if (cmd.flags?.length) {
 		md.appendMarkdown(`**Flags:** \`${cmd.flags.join(", ")}\``);
+	}
 
 	return md;
 }
@@ -29,7 +31,6 @@ function buildCommandMarkdown(cmd: CommandInfo): vscode.MarkdownString {
 function buildCompletionItems(): vscode.CompletionItem[] {
 	return commands.map((cmd) => {
 		const isConCommand = cmd.defaultValue === "cmd";
-
 		const item = new vscode.CompletionItem(
 			cmd.name,
 			isConCommand
@@ -38,10 +39,9 @@ function buildCompletionItems(): vscode.CompletionItem[] {
 		);
 		item.detail = isConCommand ? "Command" : "Console Variable";
 
-		if (!cmd.description)
-			cmd.description = `Type 'help ${cmd.name}' in the in-game console to get more info.`;
-
-		item.documentation = buildCommandMarkdown(cmd);
+		const md = buildCommandMarkdown(cmd);
+		COMMANDS_MAP.set(cmd.name, md);
+		item.documentation = md;
 
 		return item;
 	});
@@ -65,14 +65,12 @@ export function activate(context: vscode.ExtensionContext): void {
 			const range = document.getWordRangeAtPosition(position, /[\w_]+/);
 			if (!range) return null;
 
-			const cmd = COMMANDS_MAP.get(document.getText(range));
-			if (!cmd) return null;
+			const md = COMMANDS_MAP.get(document.getText(range));
+			if (!md) return null;
 
-			return new vscode.Hover(buildCommandMarkdown(cmd), range);
+			return new vscode.Hover(md, range);
 		},
 	});
 
 	context.subscriptions.push(completionProvider, hoverProvider);
 }
-
-export function deactivate(): void {}

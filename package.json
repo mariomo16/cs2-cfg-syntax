@@ -46,6 +46,7 @@
 		]
 	},
 	"scripts": {
+		"vscode:prepublish": "pnpm build",
 		"build": "tsc -p ./"
 	},
 	"repository": {
