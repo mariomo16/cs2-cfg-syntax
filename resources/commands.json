@@ -1489,6 +1489,30 @@
       "description": ""
     },
     {
+      "name": "cl_crosshairoutline_a",
+      "defaultValue": "",
+      "flags": [],
+      "description": ""
+    },
+    {
+      "name": "cl_crosshairoutline_b",
+      "defaultValue": "",
+      "flags": [],
+      "description": ""
+    },
+    {
+      "name": "cl_crosshairoutline_g",
+      "defaultValue": "",
+      "flags": [],
+      "description": ""
+    },
+    {
+      "name": "cl_crosshairoutline_r",
+      "defaultValue": "",
+      "flags": [],
+      "description": ""
+    },
+    {
       "name": "cl_crosshair_drawoutline",
       "defaultValue": "",
       "flags": [],
