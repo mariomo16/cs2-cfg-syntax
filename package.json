@@ -60,8 +60,8 @@
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "2.5.14",
-    "@types/node": "24.13.2",
+    "@types/node": "24.19.0",
     "@types/vscode": "^1.120.0",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   }
 }
