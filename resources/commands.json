@@ -1519,13 +1519,13 @@
       "description": ""
     },
     {
-      "name": "cl_crosshair_friendly_warning",
+      "name": "cl_crosshair_dynamic_spread_limit",
       "defaultValue": "",
       "flags": [],
       "description": ""
     },
     {
-      "name": "cl_crosshair_outlinethickness",
+      "name": "cl_crosshair_friendly_warning",
       "defaultValue": "",
       "flags": [],
       "description": ""
@@ -1549,13 +1549,7 @@
       "description": ""
     },
     {
-      "name": "cl_crosshairalpha",
-      "defaultValue": "",
-      "flags": [],
-      "description": ""
-    },
-    {
-      "name": "cl_crosshaircolor",
+      "name": "cl_crosshaircolor_a",
       "defaultValue": "",
       "flags": [],
       "description": ""
@@ -1585,19 +1579,13 @@
       "description": ""
     },
     {
-      "name": "cl_crosshairgap",
+      "name": "cl_crosshair_gap",
       "defaultValue": "",
       "flags": [],
       "description": ""
     },
     {
-      "name": "cl_crosshairgap_useweaponvalue",
-      "defaultValue": "",
-      "flags": [],
-      "description": ""
-    },
-    {
-      "name": "cl_crosshairsize",
+      "name": "cl_crosshair_length",
       "defaultValue": "",
       "flags": [],
       "description": ""
@@ -1609,13 +1597,7 @@
       "description": ""
     },
     {
-      "name": "cl_crosshairthickness",
-      "defaultValue": "",
-      "flags": [],
-      "description": ""
-    },
-    {
-      "name": "cl_crosshairusealpha",
+      "name": "cl_crosshair_thickness",
       "defaultValue": "",
       "flags": [],
       "description": ""
@@ -13441,6 +13423,12 @@
       "description": ""
     },
     {
+      "name": "sv_clantags_enabled",
+      "defaultValue": "",
+      "flags": [],
+      "description": ""
+    },
+    {
       "name": "sv_clockcorrection_msecs",
       "defaultValue": "",
       "flags": [],
@@ -14126,6 +14114,12 @@
     },
     {
       "name": "sv_minrate",
+      "defaultValue": "",
+      "flags": [],
+      "description": ""
+    },
+    {
+      "name": "sv_molotov_broken_glass_trap",
       "defaultValue": "",
       "flags": [],
       "description": ""
