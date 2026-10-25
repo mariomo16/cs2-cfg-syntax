@@ -11,6 +11,7 @@ interface CommandInfo {
 const commands = commandsJson.commands as CommandInfo[];
 const COMMANDS_MAP = new Map<string, vscode.MarkdownString>();
 const COMPLETION_ITEMS = buildCompletionItems();
+const KNOWN_COMMANDS = new Set(commands.map((cmd) => cmd.name));
 
 function buildCommandMarkdown(cmd: CommandInfo): vscode.MarkdownString {
   const md = new vscode.MarkdownString();
@@ -47,6 +48,42 @@ function buildCompletionItems(): vscode.CompletionItem[] {
   });
 }
 
+function validateDocument(document: vscode.TextDocument): vscode.Diagnostic[] {
+  const diagnostics: vscode.Diagnostic[] = [];
+  const text = document.getText();
+  const lines = text.split("\n");
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+
+    if (!line || line.startsWith("//")) {
+      continue;
+    }
+
+    const firstTokenMatch = line.match(/^([^\s]+)/);
+    if (!firstTokenMatch) {
+      continue;
+    }
+
+    const firstToken = firstTokenMatch[1];
+
+    if (KNOWN_COMMANDS.has(firstToken)) {
+      continue;
+    }
+
+    const range = new vscode.Range(i, 0, i, firstToken.length);
+    const diagnostic = new vscode.Diagnostic(
+      range,
+      `Unrecognized command or cvar: ${firstToken}`,
+      vscode.DiagnosticSeverity.Error,
+    );
+    diagnostic.source = "cs2-cfg";
+    diagnostics.push(diagnostic);
+  }
+
+  return diagnostics;
+}
+
 export function activate(context: vscode.ExtensionContext): void {
   const completionProvider = vscode.languages.registerCompletionItemProvider(
     "cs2-cfg",
@@ -72,5 +109,33 @@ export function activate(context: vscode.ExtensionContext): void {
     },
   });
 
-  context.subscriptions.push(completionProvider, hoverProvider);
+  const diagnosticCollection =
+    vscode.languages.createDiagnosticCollection("cs2-cfg");
+
+  const updateDiagnostics = (document: vscode.TextDocument) => {
+    if (document.languageId === "cs2-cfg") {
+      diagnosticCollection.set(document.uri, validateDocument(document));
+    }
+  };
+
+  const onDidChangeTextDocument = vscode.workspace.onDidChangeTextDocument(
+    (event) => updateDiagnostics(event.document),
+  );
+
+  const onDidOpenTextDocument =
+    vscode.workspace.onDidOpenTextDocument(updateDiagnostics);
+
+  const onDidSaveTextDocument =
+    vscode.workspace.onDidSaveTextDocument(updateDiagnostics);
+
+  vscode.workspace.textDocuments.forEach(updateDiagnostics);
+
+  context.subscriptions.push(
+    completionProvider,
+    hoverProvider,
+    diagnosticCollection,
+    onDidChangeTextDocument,
+    onDidOpenTextDocument,
+    onDidSaveTextDocument,
+  );
 }
