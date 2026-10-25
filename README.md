@@ -27,11 +27,13 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 - **Network**: IPv4 addresses and hostnames with ports
 - **Values**: Numbers, booleans, and strings
 - **Comments**: Line comments starting with `//`
+- **Error highlighting**: Unrecognized commands/cvars marked as errors
 
 ### IntelliSense
 
 - **Autocompletion**: All ConVars and Commands with type hints
 - **Hover information**: Displays command name, default value, flags, and description for any command
+- **Error reporting**: Unknown commands appear as red squiggly lines and in the Problems panel
 
 ## Installation
 
