@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Ignores values/arguments after the command
   - Skips empty lines and comments (`//`)
 
+- **CS2 Command Updates**: Added two missing commands: cl_hud_color & cl_force_spec_hud_color_to_team
+
 ### Changed
 
 - Updated version to 1.5.0 in package.json
