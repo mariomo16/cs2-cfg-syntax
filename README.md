@@ -1,8 +1,6 @@
 # CS2 Config Support for Visual Studio Code
 
-Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all ConVars & ConCommands (hopefully) as of [CS2 Build 25640462](https://steamdb.info/patchnotes/25640462/).
-
-> Partial backward compatibility with CS:GO `.cfg` files.
+Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all ConVars & ConCommands (hopefully) as of [CS2 Build 26144732](https://steamdb.info/patchnotes/26144732/).
 
 [![Version](https://vsmarketplacebadges.dev/version/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
 [![Installs](https://vsmarketplacebadges.dev/installs/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
@@ -27,11 +25,13 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 - **Network**: IPv4 addresses and hostnames with ports
 - **Values**: Numbers, booleans, and strings
 - **Comments**: Line comments starting with `//`
+- **Error highlighting**: Unrecognized commands/cvars marked as errors
 
 ### IntelliSense
 
 - **Autocompletion**: All ConVars and Commands with type hints
 - **Hover information**: Displays command name, default value, flags, and description for any command
+- **Error reporting**: Unknown commands appear as red squiggly lines and in the Problems panel
 
 ## Installation
 

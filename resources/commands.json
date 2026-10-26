@@ -1891,6 +1891,12 @@
       "description": ""
     },
     {
+      "name": "cl_force_spec_hud_color_to_team",
+      "defaultValue": "",
+      "flags": [],
+      "description": ""
+    },
+    {
       "name": "cl_grenadecrosshair_decoy",
       "defaultValue": "",
       "flags": [],
@@ -1958,6 +1964,12 @@
     },
     {
       "name": "cl_hide_avatar_images",
+      "defaultValue": "",
+      "flags": [],
+      "description": ""
+    },
+    {
+      "name": "cl_hud_color",
       "defaultValue": "",
       "flags": [],
       "description": ""

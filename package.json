@@ -4,7 +4,7 @@
   "description": "Syntax highlighting & IntelliSense for CS2 .cfg files",
   "publisher": "mario-morales-ortega",
   "icon": "./icon.webp",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "engines": {
     "vscode": "^1.120.0"
   },
@@ -60,7 +60,7 @@
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "2.5.14",
-    "@types/node": "24.19.0",
+    "@types/node": "24.19.2",
     "@types/vscode": "^1.120.0",
     "typescript": "7.0.2"
   }
