@@ -12,7 +12,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Diagnostics / Error highlighting**: Unrecognized commands and cvars are now reported as errors and appear in the Problems panel.
   - Validates the first token of each line against known ConVars/ConCommands from `resources/commands.json`
   - Ignores values/arguments after the command
-  - Skips empty lines and comments (`//`)
 
 - **CS2 Command Updates**: Added two missing commands: cl_hud_color & cl_force_spec_hud_color_to_team
 
