@@ -2,7 +2,8 @@ images/
 out/*.map
 src/
 .gitignore
+biome.json
 example.cfg
+pnpm-lock.yaml
 tsconfig.json
 vsc-extension-quickstart.md
-biome.json
