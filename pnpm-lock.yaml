@@ -14,8 +14,8 @@ importers:
         specifier: 24.19.2
         version: 24.19.2
       "@types/vscode":
-        specifier: ^1.120.0
-        version: 1.120.0
+        specifier: 1.144.0
+        version: 1.144.0
       typescript:
         specifier: 7.0.2
         version: 7.0.2
@@ -129,10 +129,10 @@ packages:
         integrity: sha512-93d49wCWJkCyN87MxLpNN6KXPCwFw7bVUg79mGUV1OS40JGWwVCr8n61DXCSqz7CV6/VfPkb7xec7uP2M+QHWQ==,
       }
 
-  "@types/vscode@1.120.0":
+  "@types/vscode@1.144.0":
     resolution:
       {
-        integrity: sha512-feaT4Rst+FkTch5zz/ZbNCxoIvo55YU80Be2kiL7OJcod4+CUYf2lUBPdIJzozNnSEMq1VRTGrWEcCGFB3fBmA==,
+        integrity: sha512-IDd4eQzu6MjGucfaQF0V/TY5vHX9o1albkKyZD6K/iVXSCcL5NSj4KW1wWfx1QDadPKWyxMaE/+M1wKLCJlXpA==,
       }
 
   "@typescript/typescript-aix-ppc64@7.0.2":
@@ -377,7 +377,7 @@ snapshots:
     dependencies:
       undici-types: 7.24.6
 
-  "@types/vscode@1.120.0": {}
+  "@types/vscode@1.144.0": {}
 
   "@typescript/typescript-aix-ppc64@7.0.2":
     optional: true
