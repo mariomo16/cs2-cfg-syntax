@@ -5,6 +5,12 @@ All notable changes to the "CS2 Config Support" extension will be documented in 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Added syntax highlighting for `new_command`.
+
 ## [1.5.0] - 2026-10-25
 
 ### Added
