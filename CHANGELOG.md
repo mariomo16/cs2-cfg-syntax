@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added syntax highlighting for `cl_weapon_stealth_reload_toggle`.
+- **CS2 Command Updates**: Added 85 missing commands & one new command: `cl_weapon_stealth_reload_toggle`.
+- **CS2 Command Metadata**: Added descriptions, default values, and flags.
 
 ## [1.5.0] - 2026-10-25
 
