@@ -4,9 +4,9 @@
   "description": "Syntax highlighting & IntelliSense for CS2 .cfg files",
   "publisher": "mario-morales-ortega",
   "icon": "./icon.png",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "engines": {
-    "vscode": "^1.120.0"
+    "vscode": "^1.74.0"
   },
   "categories": [
     "Programming Languages",
@@ -59,9 +59,9 @@
   "homepage": "https://github.com/mariomo16/cs2-cfg-syntax#readme",
   "license": "MIT",
   "devDependencies": {
-    "@biomejs/biome": "2.5.14",
+    "@biomejs/biome": "2.6.3",
     "@types/node": "24.19.2",
-    "@types/vscode": "^1.120.0",
+    "@types/vscode": "1.144.0",
     "typescript": "7.0.2"
   }
 }

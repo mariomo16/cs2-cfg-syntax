@@ -1,6 +1,6 @@
 # CS2 Config Support for Visual Studio Code
 
-Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all ConVars & ConCommands (hopefully) as of [CS2 Build 26144732](https://steamdb.info/patchnotes/26144732/).
+Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all cvars & commands (hopefully) as of [CS2 Build 26281801](https://steamdb.info/patchnotes/26281801/).
 
 [![Version](https://vsmarketplacebadges.dev/version/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
 [![Installs](https://vsmarketplacebadges.dev/installs/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
@@ -49,11 +49,6 @@ The extension activates automatically when you open a `.cfg` file. If it doesn't
 Alternatively, add this to your user settings (`Ctrl+,`):
 
 ![VS Code settings.json showing the file association configuration for .cfg files](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/settings.png)
-
-## Known Issues
-
-- Some regex patterns are intentionally broad (e.g., `r_`) and may match more identifiers than intended.
-- Most commands lack metadata (default value, flags, description) due to the sheer number of ConVars and ConCommands in CS2. Contributions are welcome.
 
 ## Changelog
 
