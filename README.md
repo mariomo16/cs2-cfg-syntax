@@ -1,6 +1,6 @@
 # CS2 Config Support for Visual Studio Code
 
-Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all ConVars & ConCommands (hopefully) as of [CS2 Build 26281801](https://steamdb.info/patchnotes/26281801/).
+Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recognizes all cvars & commands (hopefully) as of [CS2 Build 26281801](https://steamdb.info/patchnotes/26281801/).
 
 [![Version](https://vsmarketplacebadges.dev/version/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
 [![Installs](https://vsmarketplacebadges.dev/installs/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
