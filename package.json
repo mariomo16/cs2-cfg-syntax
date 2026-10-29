@@ -59,7 +59,7 @@
   "homepage": "https://github.com/mariomo16/cs2-cfg-syntax#readme",
   "license": "MIT",
   "devDependencies": {
-    "@biomejs/biome": "2.6.3",
+    "@biomejs/biome": "2.6.4",
     "@types/node": "24.19.2",
     "@types/vscode": "^1.74.0",
     "typescript": "7.0.2"
