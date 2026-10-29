@@ -5,6 +5,12 @@ All notable changes to the "CS2 Config Support" extension will be documented in 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.1] - Unreleased
+
+### Changed
+
+- **CS2 Command Metadata**: Removed flags that do not exist in CS2 and renamed flags to match the official CS2 naming.
+
 ## [1.6.0] - 2026-10-29
 
 ### Added
