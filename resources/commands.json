@@ -3271,6 +3271,12 @@
       "description": ""
     },
     {
+      "name": "cl_weapon_stealth_reload_toggle",
+      "defaultValue": "",
+      "flags": [],
+      "description": ""
+    },
+    {
       "name": "clear",
       "defaultValue": "",
       "flags": [],
