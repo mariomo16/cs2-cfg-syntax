@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added syntax highlighting for `new_command`.
+- Added syntax highlighting for `cl_weapon_stealth_reload_toggle`.
 
 ## [1.5.0] - 2026-10-25
 
