@@ -725,6 +725,12 @@
       "description": "bot_path <all> <t|ct> <type> <difficulty> <name> - Tells a specific bot to follow a human path, matching the given criteria."
     },
     {
+      "name": "bot_path_require_reachable_goal",
+      "defaultValue": true,
+      "flags": ["sv", "release"],
+      "description": "If nonzero, bots refuse to path to a nav area that the nav build did not reach from a player spawn."
+    },
+    {
       "name": "bot_pistols_only",
       "defaultValue": "",
       "flags": ["sv", "release"],
@@ -1505,30 +1511,6 @@
       "description": "Used by the client to inform the server of their desired queue length.  Derived from cl_tickpacket_recvmargin_desired and cl_tickpacket_desired_queuelength"
     },
     {
-      "name": "cl_crosshairoutline_a",
-      "defaultValue": 255,
-      "flags": ["0,", "255,", "cl", "archive", "per_user"],
-      "description": "Crosshair outline opacity. 0 = fully transparent, 255 = fully opaque"
-    },
-    {
-      "name": "cl_crosshairoutline_b",
-      "defaultValue": 0,
-      "flags": ["0,", "255,", "cl", "archive", "per_user"],
-      "description": "Crosshair outline color, blue component"
-    },
-    {
-      "name": "cl_crosshairoutline_g",
-      "defaultValue": 0,
-      "flags": ["0,", "255,", "cl", "archive", "per_user"],
-      "description": "Crosshair outline color, green component"
-    },
-    {
-      "name": "cl_crosshairoutline_r",
-      "defaultValue": 0,
-      "flags": ["0,", "255,", "cl", "archive", "per_user"],
-      "description": "Crosshair outline color, red component"
-    },
-    {
       "name": "cl_crosshair_drawoutline",
       "defaultValue": 1,
       "flags": ["0,", "2,", "cl", "archive", "per_user"],
@@ -1571,6 +1553,18 @@
       "description": "0: off, 1: on"
     },
     {
+      "name": "cl_crosshair_gap",
+      "defaultValue": 4,
+      "flags": ["-3840,", "3840,", "cl", "archive", "per_user"],
+      "description": "Offset added to the gap between the crosshair center and the bars."
+    },
+    {
+      "name": "cl_crosshair_length",
+      "defaultValue": 8,
+      "flags": ["0,", "255,", "cl", "archive", "per_user"],
+      "description": "Length of each crosshair bar, scaled with screen resolution"
+    },
+    {
       "name": "cl_crosshair_recoil",
       "defaultValue": true,
       "flags": ["cl", "archive", "per_user"],
@@ -1587,6 +1581,12 @@
       "defaultValue": false,
       "flags": ["cl", "archive", "per_user"],
       "description": "T-style crosshair: hide the top bar"
+    },
+    {
+      "name": "cl_crosshair_thickness",
+      "defaultValue": 2,
+      "flags": ["0,", "32,", "cl", "archive", "per_user"],
+      "description": "Thickness of the crosshair bars and circle, scaled with screen resolution (minimum 1 pixel)"
     },
     {
       "name": "cl_crosshaircolor_a",
@@ -1619,28 +1619,34 @@
       "description": "Draw a dot at the center of the crosshair"
     },
     {
-      "name": "cl_crosshair_gap",
-      "defaultValue": 4,
-      "flags": ["-3840,", "3840,", "cl", "archive", "per_user"],
-      "description": "Offset added to the gap between the crosshair center and the bars."
+      "name": "cl_crosshairoutline_a",
+      "defaultValue": 255,
+      "flags": ["0,", "255,", "cl", "archive", "per_user"],
+      "description": "Crosshair outline opacity. 0 = fully transparent, 255 = fully opaque"
     },
     {
-      "name": "cl_crosshair_length",
-      "defaultValue": 8,
+      "name": "cl_crosshairoutline_b",
+      "defaultValue": 0,
       "flags": ["0,", "255,", "cl", "archive", "per_user"],
-      "description": "Length of each crosshair bar, scaled with screen resolution"
+      "description": "Crosshair outline color, blue component"
+    },
+    {
+      "name": "cl_crosshairoutline_g",
+      "defaultValue": 0,
+      "flags": ["0,", "255,", "cl", "archive", "per_user"],
+      "description": "Crosshair outline color, green component"
+    },
+    {
+      "name": "cl_crosshairoutline_r",
+      "defaultValue": 0,
+      "flags": ["0,", "255,", "cl", "archive", "per_user"],
+      "description": "Crosshair outline color, red component"
     },
     {
       "name": "cl_crosshairstyle",
       "defaultValue": 7,
       "flags": ["0,", "9,", "cl", "archive", "per_user"],
       "description": "Crosshair style. 0 = Dynamic Cross, 1 = Dynamic Circle, 2 = Dynamic Cross (Legacy), 3 = Static Circle, 4 = Static Cross, 5 = Static Cross (Shot Feedback), 6 = Dot Only, 7 = Dynamic Quad, 8 = Static Square, 9 = Static Quad."
-    },
-    {
-      "name": "cl_crosshair_thickness",
-      "defaultValue": 2,
-      "flags": ["0,", "32,", "cl", "archive", "per_user"],
-      "description": "Thickness of the crosshair bars and circle, scaled with screen resolution (minimum 1 pixel)"
     },
     {
       "name": "cl_cursor_scale",
@@ -1731,6 +1737,24 @@
       "defaultValue": "",
       "flags": ["cl", "cheat"],
       "description": "Toggles visibility of the debug overlay system."
+    },
+    {
+      "name": "cl_decryptdata_key",
+      "defaultValue": "",
+      "flags": ["release"],
+      "description": "Key to decrypt encrypted GOTV messages"
+    },
+    {
+      "name": "cl_decryptdata_key_pub",
+      "defaultValue": "",
+      "flags": ["release"],
+      "description": "Key to decrypt public encrypted GOTV messages"
+    },
+    {
+      "name": "cl_demo_freecam",
+      "defaultValue": true,
+      "flags": ["cl", "release"],
+      "description": "During demo playback, roaming spectator movement runs on real time so it works while paused and at any playback rate."
     },
     {
       "name": "cl_demo_predict",
@@ -1853,6 +1877,12 @@
       "description": "Displays the entity name for all entities that have ShouldDisplayInActorNames true in code"
     },
     {
+      "name": "cl_ent_animgraph_debug",
+      "defaultValue": "",
+      "flags": ["cl", "cheat"],
+      "description": "Displays debug draws about the given entity(ies) animgraph Arguments:   \t{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}"
+    },
+    {
       "name": "cl_ent_animgraph2_open_graph",
       "defaultValue": "",
       "flags": ["cl", "cheat"],
@@ -1863,12 +1893,6 @@
       "defaultValue": "",
       "flags": ["cl", "cheat"],
       "description": "Starts live debugging & recording the AG2 graph for a given entity Arguments: entityName Arguments:   \t{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}"
-    },
-    {
-      "name": "cl_ent_animgraph_debug",
-      "defaultValue": "",
-      "flags": ["cl", "cheat"],
-      "description": "Displays debug draws about the given entity(ies) animgraph Arguments:   \t{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}"
     },
     {
       "name": "cl_ent_attachment_filter_substrings",
@@ -1907,10 +1931,46 @@
       "description": "Find and list all entities with classnames or targetnames that contain the specified substrings. Format: find_ent <substring>"
     },
     {
+      "name": "cl_error_report_time",
+      "defaultValue": 0,
+      "flags": ["cl", "release"],
+      "description": "Minimum time in seconds that must elapse before printing prediction error summary. 0 to disable."
+    },
+    {
       "name": "cl_force_spec_hud_color_to_team",
       "defaultValue": true,
       "flags": ["cl", "archive"],
       "description": "Spec hud color setting is always team/teammate"
+    },
+    {
+      "name": "cl_frametime_summary_report_detailed",
+      "defaultValue": true,
+      "flags": ["cl", "release"],
+      "description": "When a perf report is dumped at the end of the session, should it be detailed?"
+    },
+    {
+      "name": "cl_glow_item_far_b",
+      "defaultValue": 1,
+      "flags": ["cl", "release"],
+      "description": ""
+    },
+    {
+      "name": "cl_glow_item_far_g",
+      "defaultValue": 0.4,
+      "flags": ["cl", "release"],
+      "description": ""
+    },
+    {
+      "name": "cl_glow_item_far_r",
+      "defaultValue": 0.3,
+      "flags": ["cl", "release"],
+      "description": ""
+    },
+    {
+      "name": "cl_graphics_driver_warning_dont_show_again",
+      "defaultValue": false,
+      "flags": ["cl", "archive", "release"],
+      "description": "Graphics driver recommendation (NVIDIA 581.80 / AMD 23.11.1)"
     },
     {
       "name": "cl_grenadecrosshair_decoy",
@@ -1983,6 +2043,12 @@
       "defaultValue": 0,
       "flags": ["cl", "archive"],
       "description": "Hide avatar images for other players. 0 - Off. 1 - Block All 2 - Block all but friends"
+    },
+    {
+      "name": "cl_http_log_enable",
+      "defaultValue": false,
+      "flags": ["cl", "norecord", "release"],
+      "description": "Allows sending HTTP log from client main menu."
     },
     {
       "name": "cl_hud_color",
@@ -2240,6 +2306,12 @@
       "name": "cl_low_latency_vsync_recommendation_dont_show_again",
       "defaultValue": false,
       "flags": ["cl", "archive", "release"],
+      "description": ""
+    },
+    {
+      "name": "cl_major_store_watch_list",
+      "defaultValue": "",
+      "flags": ["cl", "archive"],
       "description": ""
     },
     {
@@ -3125,6 +3197,12 @@
       "description": ""
     },
     {
+      "name": "cl_spectator_predict",
+      "defaultValue": false,
+      "flags": ["cl", "release"],
+      "description": "Enable 'TrueView' when spectating another player, which attempts to recreate the client's experience more accurately.  The server may not allow this at certain times."
+    },
+    {
       "name": "cl_spewserializers",
       "defaultValue": "",
       "flags": ["cheat"],
@@ -3189,6 +3267,12 @@
       "defaultValue": 0,
       "flags": ["release"],
       "description": ""
+    },
+    {
+      "name": "cl_ticks_net_print_threshold",
+      "defaultValue": 2,
+      "flags": ["release"],
+      "description": "Print a message if network issues cause problems with server snapshots of user commands not being available when needed, if the percentage (0...100) exceeds this value.  A value of 0 will cause the message to always print each time it is calculated"
     },
     {
       "name": "cl_ticks_warning_level",
@@ -3683,6 +3767,12 @@
       "description": ""
     },
     {
+      "name": "csm_cascade_viewdir_shadow_bias_scale",
+      "defaultValue": 2,
+      "flags": ["cl", "cheat"],
+      "description": ""
+    },
+    {
       "name": "csm_cascade0_override_dist",
       "defaultValue": -1,
       "flags": ["cl", "cheat"],
@@ -3703,12 +3793,6 @@
     {
       "name": "csm_cascade3_override_dist",
       "defaultValue": -1,
-      "flags": ["cl", "cheat"],
-      "description": ""
-    },
-    {
-      "name": "csm_cascade_viewdir_shadow_bias_scale",
-      "defaultValue": 2,
       "flags": ["cl", "cheat"],
       "description": ""
     },
@@ -4307,6 +4391,12 @@
       "description": "ent_actornames font size"
     },
     {
+      "name": "ent_animgraph_debug",
+      "defaultValue": "",
+      "flags": ["sv", "cheat"],
+      "description": "Displays debug draws about the given entity(ies) animgraph Arguments:   \t{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}"
+    },
+    {
       "name": "ent_animgraph2_open_graph",
       "defaultValue": "",
       "flags": ["sv", "cheat"],
@@ -4317,12 +4407,6 @@
       "defaultValue": "",
       "flags": ["sv", "cheat"],
       "description": "Starts live debugging & recording the AG2 graph for a given entity Arguments: entityName Arguments:   \t{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}"
-    },
-    {
-      "name": "ent_animgraph_debug",
-      "defaultValue": "",
-      "flags": ["sv", "cheat"],
-      "description": "Displays debug draws about the given entity(ies) animgraph Arguments:   \t{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}"
     },
     {
       "name": "ent_attachment_filter_substrings",
@@ -4613,12 +4697,6 @@
       "description": "Displays text debugging information about the given entity(ies) on top of the entity (See Overlay Text) Arguments:   \t{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}"
     },
     {
-      "name": "ent_text256",
-      "defaultValue": "",
-      "flags": ["sv", "cheat"],
-      "description": "Displays text debugging information about the given entity(ies) [within 256 units of the player] on top of the entity (See Overlay Text) Arguments:   \t{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}"
-    },
-    {
       "name": "ent_text_clear",
       "defaultValue": "",
       "flags": ["sv", "cheat"],
@@ -4671,6 +4749,12 @@
       "defaultValue": "",
       "flags": ["sv", "cheat"],
       "description": "Removes from the list of names to display text debugging information about the given entity(ies) on top of the entity (See Overlay Text) Arguments:   \t{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}"
+    },
+    {
+      "name": "ent_text256",
+      "defaultValue": "",
+      "flags": ["sv", "cheat"],
+      "description": "Displays text debugging information about the given entity(ies) [within 256 units of the player] on top of the entity (See Overlay Text) Arguments:   \t{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}"
     },
     {
       "name": "ent_ungrab",
@@ -6373,6 +6457,12 @@
       "description": "When performing CSGO community matchmaking look for servers with at least so many human players"
     },
     {
+      "name": "mm_dedicated_force_servers",
+      "defaultValue": "",
+      "flags": ["release"],
+      "description": "Comma delimited list of ip:port of servers used to search for dedicated servers instead of searching for public servers. Use syntax `publicip1:port|privateip1:port,publicip2:port|privateip2:port` if your server is behind NAT. If the server is behind NAT, you can specify `0.0.0.0|privateip:port` and if server port is in the list of `mm_server_search_lan_ports` its public address should be automatically detected."
+    },
+    {
       "name": "mm_dedicated_search_maxping",
       "defaultValue": 150,
       "flags": ["25,", "350,", "archive"],
@@ -6669,6 +6759,12 @@
       "defaultValue": 1,
       "flags": ["sv", "cl", "rep", "release", "commandline_enforced"],
       "description": "Scales the damage a T player takes by this much when they take damage in the body. (1 == 100%, 0.5 == 50%)"
+    },
+    {
+      "name": "mp_damage_scale_t_head",
+      "defaultValue": 1,
+      "flags": ["sv", "cl", "rep", "release", "commandline_enforced"],
+      "description": "Scales the damage a T player takes by this much when they take damage in the head (1 == 100%, 0.5 == 50%).\t REMEMBER! headshots do 4x the damage of the body before this scaler is applied."
     },
     {
       "name": "mp_damage_vampiric_amount",
@@ -7433,6 +7529,24 @@
       "description": "T enemy card for full buy round when playing bomb site retake."
     },
     {
+      "name": "mp_retake_t_loadout_full_buy_round",
+      "defaultValue": "0|2;#GameUI_Retake_Card_OlReliable,1,1,rifle1,grenade0|1;#GameUI_Retake_Card_SmokeShow,1,1,rifle1,grenade1|1;#GameUI_Retake_Card_HotShot,1,1,rifle1,grenade3|1;#GameUI_Retake_Card_EyeSpy,1,1,weapon_sg556,grenade2",
+      "flags": ["sv", "cl", "rep", "release", "commandline_enforced"],
+      "description": "T Loadouts for full buy round when playing bomb site retake."
+    },
+    {
+      "name": "mp_retake_t_loadout_light_buy_round",
+      "defaultValue": "0|2;#GameUI_Retake_Card_BackInAFlash,1,1,weapon_ump45,grenade0|2;#GameUI_Retake_Card_AllIn,1,1,weapon_galilar|1;#GameUI_Retake_Card_BoomBox,1,1,weapon_mac10,grenade2,grenade1|1;#GameUI_Retake_Card_SetThemFree,1,1,weapon_ssg08,grenade0",
+      "flags": ["sv", "cl", "rep", "release", "commandline_enforced"],
+      "description": "T Loadouts for force buy round when playing bomb site retake."
+    },
+    {
+      "name": "mp_retake_t_loadout_upgraded_pistol_round",
+      "defaultValue": "0|2;#GameUI_Retake_Card_BlindFire,1,0,weapon_elite,grenade0|2;#GameUI_Retake_Card_QueOta,0,0,weapon_deagle|1;#GameUI_Retake_Card_SmokeScreen,0,0,weapon_p250,grenade1|1;#GameUI_Retake_Card_TecTecBoom,0,0,weapon_tec9,grenade2",
+      "flags": ["sv", "cl", "rep", "release", "commandline_enforced"],
+      "description": "T Loadouts for upgraded pistol round when playing bomb site retake."
+    },
+    {
       "name": "mp_round_restart_delay",
       "defaultValue": 7,
       "flags": ["0,", "sv", "cl", "rep", "release", "commandline_enforced"],
@@ -7485,6 +7599,12 @@
       "defaultValue": "",
       "flags": ["sv", "release"],
       "description": "Scramble the teams and restart the game"
+    },
+    {
+      "name": "mp_shoot_dropped_grenades",
+      "defaultValue": false,
+      "flags": ["sv", "cl", "rep", "release", "commandline_enforced"],
+      "description": "Dropped grenades detonate when shot."
     },
     {
       "name": "mp_shorthanded_cash_bonus_ignore_kicked",
@@ -7605,6 +7725,12 @@
       "defaultValue": 6.5,
       "flags": ["0,", "sv", "notify", "rep", "release", "commandline_enforced"],
       "description": "How many seconds for team intro"
+    },
+    {
+      "name": "mp_team_intro_type",
+      "defaultValue": "auto",
+      "flags": ["sv", "cl", "rep", "release", "commandline_enforced"],
+      "description": "none, normal, wingman, rush, or auto (implies normal if mp_halftime is set, none otherwise)"
     },
     {
       "name": "mp_team_timeout_max",
@@ -7937,6 +8063,12 @@
       "defaultValue": "",
       "flags": ["norecord", "release"],
       "description": "Multiply specified convar value."
+    },
+    {
+      "name": "name",
+      "defaultValue": "unnamed",
+      "flags": ["archive", "per_user"],
+      "description": ""
     },
     {
       "name": "nav_add_to_selected_set",
@@ -9709,6 +9841,12 @@
       "description": "List all registered net messages"
     },
     {
+      "name": "net_message_size_enforce",
+      "defaultValue": 1,
+      "flags": ["release"],
+      "description": "Check declared engine message size limit, and either warn or reject.  Note that this is ignored in -tools mode.  0=ignore, 1=warn/log, 2=warn/assert, 3=reject"
+    },
+    {
       "name": "net_messageinfo",
       "defaultValue": "",
       "flags": ["cheat"],
@@ -9990,12 +10128,6 @@
       "description": "Play a recorded demo file (.dem )."
     },
     {
-      "name": "player0_using_joystick",
-      "defaultValue": false,
-      "flags": ["archive"],
-      "description": ""
-    },
-    {
       "name": "player_botdifflast_s",
       "defaultValue": "2",
       "flags": ["cl", "archive", "release"],
@@ -10008,9 +10140,21 @@
       "description": ""
     },
     {
+      "name": "player_competitive_maplist_2v2_10_0_D684D4E1",
+      "defaultValue": "mg_de_inferno,mg_de_nuke,mg_de_vertigo,mg_de_debris,mg_de_poseidon,mg_de_eldorado,mg_de_overpass",
+      "flags": ["cl", "archive"],
+      "description": ""
+    },
+    {
       "name": "player_competitive_maplist_8_10_0_556B3D03",
       "defaultValue": "",
       "flags": [],
+      "description": ""
+    },
+    {
+      "name": "player_competitive_maplist_8_10_0_A062AC6A",
+      "defaultValue": "mg_de_dust2,mg_de_train,mg_de_ancient,mg_de_inferno,mg_de_nuke,mg_de_vertigo,mg_de_mirage,mg_cs_office,mg_cs_italy,mg_de_cache,mg_de_boulder,mg_de_anubis,mg_lobby_mapveto,mg_de_fachwerk,mg_cs_shelter,mg_de_overpass",
+      "flags": ["cl", "archive"],
       "description": ""
     },
     {
@@ -10065,6 +10209,12 @@
       "name": "player_wargames_list2_10_0_0",
       "defaultValue": "",
       "flags": ["cl", "archive"],
+      "description": ""
+    },
+    {
+      "name": "player0_using_joystick",
+      "defaultValue": false,
+      "flags": ["archive"],
       "description": ""
     },
     {
@@ -12084,6 +12234,30 @@
       "description": "Volume of Deathcam Timers"
     },
     {
+      "name": "snd_deathcamera_volume_armsrace",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Arms Race volume of Deathcam Timers"
+    },
+    {
+      "name": "snd_deathcamera_volume_casual",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Casual volume of Deathcam Timers"
+    },
+    {
+      "name": "snd_deathcamera_volume_deathmatch",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Deathmatch volume of Deathcam Timers"
+    },
+    {
+      "name": "snd_deathcamera_volume_rush",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Rush volume of Deathcam Timers"
+    },
+    {
       "name": "snd_disable_mixer_duck",
       "defaultValue": false,
       "flags": ["cheat"],
@@ -12246,6 +12420,30 @@
       "description": "Volume of Map Objective Music"
     },
     {
+      "name": "snd_mapobjective_volume_armsrace",
+      "defaultValue": 0.01,
+      "flags": ["cl", "archive", "release"],
+      "description": "Arms Race volume of Map Objective Music"
+    },
+    {
+      "name": "snd_mapobjective_volume_casual",
+      "defaultValue": 0.01,
+      "flags": ["cl", "archive", "release"],
+      "description": "Casual volume of Map Objective Music"
+    },
+    {
+      "name": "snd_mapobjective_volume_deathmatch",
+      "defaultValue": 0.01,
+      "flags": ["cl", "archive", "release"],
+      "description": "Deathmatch volume of Map Objective Music"
+    },
+    {
+      "name": "snd_mapobjective_volume_rush",
+      "defaultValue": 0.01,
+      "flags": ["cl", "archive", "release"],
+      "description": "Rush volume of Map Objective Music"
+    },
+    {
       "name": "snd_menumap_volume",
       "defaultValue": 1,
       "flags": ["0,", "1,", "cl", "archive", "release"],
@@ -12256,6 +12454,30 @@
       "defaultValue": 0.04,
       "flags": ["0,", "1,", "cl", "archive", "release"],
       "description": "Volume of Menu / Non-gameplay music"
+    },
+    {
+      "name": "snd_menumusic_volume_armsrace",
+      "defaultValue": 0.04,
+      "flags": ["cl", "archive", "release"],
+      "description": "Arms Race volume of Menu / Non-gameplay music"
+    },
+    {
+      "name": "snd_menumusic_volume_casual",
+      "defaultValue": 0.04,
+      "flags": ["cl", "archive", "release"],
+      "description": "Casual volume of Menu / Non-gameplay music"
+    },
+    {
+      "name": "snd_menumusic_volume_deathmatch",
+      "defaultValue": 0.04,
+      "flags": ["cl", "archive", "release"],
+      "description": "Deathmatch volume of Menu / Non-gameplay music"
+    },
+    {
+      "name": "snd_menumusic_volume_rush",
+      "defaultValue": 0.04,
+      "flags": ["cl", "archive", "release"],
+      "description": "Rush volume of Menu / Non-gameplay music"
     },
     {
       "name": "snd_mixahead",
@@ -12274,6 +12496,18 @@
       "defaultValue": 1,
       "flags": ["cheat"],
       "description": ""
+    },
+    {
+      "name": "snd_music_mode",
+      "defaultValue": 1,
+      "flags": ["cl", "release"],
+      "description": "Selects which per-game-mode set of music volume convars is live"
+    },
+    {
+      "name": "snd_music_settings_mode",
+      "defaultValue": 0,
+      "flags": ["cl", "archive", "release"],
+      "description": "Which game mode's music volumes the audio settings screen is editing"
     },
     {
       "name": "snd_musicvolume",
@@ -12298,6 +12532,30 @@
       "defaultValue": 0.16,
       "flags": ["0,", "1,", "cl", "archive", "release"],
       "description": "Volume of MVP Music"
+    },
+    {
+      "name": "snd_mvp_volume_armsrace",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Arms Race volume of MVP Music"
+    },
+    {
+      "name": "snd_mvp_volume_casual",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Casual volume of MVP Music"
+    },
+    {
+      "name": "snd_mvp_volume_deathmatch",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Deathmatch volume of MVP Music"
+    },
+    {
+      "name": "snd_mvp_volume_rush",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Rush volume of MVP Music"
     },
     {
       "name": "snd_new_visualize",
@@ -12390,16 +12648,88 @@
       "description": "Volume of Move Action Music"
     },
     {
+      "name": "snd_roundaction_volume_armsrace",
+      "defaultValue": 0,
+      "flags": ["cl", "archive", "release"],
+      "description": "Arms Race volume of Move Action Music"
+    },
+    {
+      "name": "snd_roundaction_volume_casual",
+      "defaultValue": 0,
+      "flags": ["cl", "archive", "release"],
+      "description": "Casual volume of Move Action Music"
+    },
+    {
+      "name": "snd_roundaction_volume_deathmatch",
+      "defaultValue": 0,
+      "flags": ["cl", "archive", "release"],
+      "description": "Deathmatch volume of Move Action Music"
+    },
+    {
+      "name": "snd_roundaction_volume_rush",
+      "defaultValue": 0.0064,
+      "flags": ["cl", "archive", "release"],
+      "description": "Rush volume of Move Action Music"
+    },
+    {
       "name": "snd_roundend_volume",
       "defaultValue": 0.16,
       "flags": ["0,", "1,", "cl", "archive", "release"],
       "description": "Volume of Won/Lost Music"
     },
     {
+      "name": "snd_roundend_volume_armsrace",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Arms Race volume of Won/Lost Music"
+    },
+    {
+      "name": "snd_roundend_volume_casual",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Casual volume of Won/Lost Music"
+    },
+    {
+      "name": "snd_roundend_volume_deathmatch",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Deathmatch volume of Won/Lost Music"
+    },
+    {
+      "name": "snd_roundend_volume_rush",
+      "defaultValue": 0.16,
+      "flags": ["cl", "archive", "release"],
+      "description": "Rush volume of Won/Lost Music"
+    },
+    {
       "name": "snd_roundstart_volume",
       "defaultValue": 0,
       "flags": ["0,", "1,", "cl", "archive", "release"],
       "description": "Volume of Round Start Music"
+    },
+    {
+      "name": "snd_roundstart_volume_armsrace",
+      "defaultValue": 0.0225,
+      "flags": ["cl", "archive", "release"],
+      "description": "Arms Race volume of Round Start Music"
+    },
+    {
+      "name": "snd_roundstart_volume_casual",
+      "defaultValue": 0.0225,
+      "flags": ["cl", "archive", "release"],
+      "description": "Casual volume of Round Start Music"
+    },
+    {
+      "name": "snd_roundstart_volume_deathmatch",
+      "defaultValue": 0.0225,
+      "flags": ["archive", "release"],
+      "description": "Deathmatch volume of Round Start Music"
+    },
+    {
+      "name": "snd_roundstart_volume_rush",
+      "defaultValue": 0.0225,
+      "flags": ["archive", "release"],
+      "description": "Rush volume of Round Start Music"
     },
     {
       "name": "snd_samplers_play_note",
@@ -12996,6 +13326,30 @@
       "description": "Volume of Ten Second Warnings"
     },
     {
+      "name": "snd_tensecondwarning_volume_armsrace",
+      "defaultValue": 0.01,
+      "flags": ["cl", "archive", "release"],
+      "description": "Arms Race volume of Ten Second Warnings"
+    },
+    {
+      "name": "snd_tensecondwarning_volume_casual",
+      "defaultValue": 0.01,
+      "flags": ["cl", "archive", "release"],
+      "description": "Casual volume of Ten Second Warnings"
+    },
+    {
+      "name": "snd_tensecondwarning_volume_deathmatch",
+      "defaultValue": 0.01,
+      "flags": ["cl", "archive", "release"],
+      "description": "Deathmatch volume of Ten Second Warnings"
+    },
+    {
+      "name": "snd_tensecondwarning_volume_rush",
+      "defaultValue": 0.01,
+      "flags": ["cl", "archive", "release"],
+      "description": "Rush volume of Ten Second Warnings"
+    },
+    {
       "name": "snd_toolvolume",
       "defaultValue": 1,
       "flags": ["0,", "1,", "archive"],
@@ -13408,6 +13762,12 @@
       "defaultValue": 0,
       "flags": ["sv", "cl", "rep", "release", "commandline_enforced"],
       "description": "0:off | 1: view-only | 2: edit."
+    },
+    {
+      "name": "sv_allow_approximate_spawns",
+      "defaultValue": false,
+      "flags": ["sv", "cl", "rep", "release", "commandline_enforced"],
+      "description": "Test spawn points for occupancy. Fall back to placing players in the nearest empty space instead of overlapping."
     },
     {
       "name": "sv_allow_votes",
@@ -14308,6 +14668,36 @@
       "description": ""
     },
     {
+      "name": "sv_net_client_message_process_time_ms_drop_burst",
+      "defaultValue": 500,
+      "flags": ["release"],
+      "description": "Drop a client if processing their messages consumes more than N ms of CPU time in a burst (token bucket capacity)"
+    },
+    {
+      "name": "sv_net_client_message_process_time_ms_drop_rate",
+      "defaultValue": 200,
+      "flags": ["release"],
+      "description": "Drop a client if processing their messages consumes more than N ms of CPU time per second, sustained (token bucket fill rate)"
+    },
+    {
+      "name": "sv_net_client_message_process_time_ms_warn_burst",
+      "defaultValue": 50,
+      "flags": ["release"],
+      "description": "Warn if processing messages from a client consumes more than N ms of CPU time in a burst (token bucket capacity)"
+    },
+    {
+      "name": "sv_net_client_message_process_time_ms_warn_rate",
+      "defaultValue": 5,
+      "flags": ["release"],
+      "description": "Warn if processing messages from a client consumes more than N ms of CPU time per second, sustained (token bucket fill rate)"
+    },
+    {
+      "name": "sv_netprof_delta_sharing_temp",
+      "defaultValue": false,
+      "flags": ["release"],
+      "description": "Temp counter for measuring performance impact of some network changes. To be removed by the end of Sept 2026"
+    },
+    {
       "name": "sv_networkvar_perfieldtracking",
       "defaultValue": true,
       "flags": ["release"],
@@ -14680,6 +15070,12 @@
       "description": "Current name of the skybox texture"
     },
     {
+      "name": "sv_smoke_lighting_changed",
+      "defaultValue": "cmd",
+      "flags": ["sv", "release"],
+      "description": "Recompute smoke volume LPV caches"
+    },
+    {
       "name": "sv_snapshot_unlimited",
       "defaultValue": false,
       "flags": ["rep", "release"],
@@ -14696,6 +15092,12 @@
       "defaultValue": 15,
       "flags": ["sv", "rep", "release"],
       "description": "Players that have never moved since they spawned will drop the bomb after this amount of time."
+    },
+    {
+      "name": "sv_spawn_random_nudge_offset",
+      "defaultValue": 0,
+      "flags": ["sv", "cl", "rep", "release", "commandline_enforced"],
+      "description": "Max distance in X and Y to randomly offset a player from their spawn position, for procedural spawn variation. 0 to disable."
     },
     {
       "name": "sv_spec_hear",
@@ -14762,6 +15164,12 @@
       "defaultValue": 0.7,
       "flags": ["sv", "cl", "rep", "cheat", "release"],
       "description": ""
+    },
+    {
+      "name": "sv_steamauth_correct",
+      "defaultValue": false,
+      "flags": ["release"],
+      "description": "Correct behavior"
     },
     {
       "name": "sv_steamauth_enforce",
@@ -15282,6 +15690,18 @@
       "description": "Play a demo and report performance info."
     },
     {
+      "name": "timedemo_end",
+      "defaultValue": "-1",
+      "flags": ["release"],
+      "description": "Ends timedemo on given tick."
+    },
+    {
+      "name": "timedemo_start",
+      "defaultValue": "-1",
+      "flags": ["release"],
+      "description": "Starts timedemo on given tick."
+    },
+    {
       "name": "timedemoquit",
       "defaultValue": "",
       "flags": ["release"],
@@ -15378,12 +15798,6 @@
       "description": "Automatically broadcasts all games as GOTV demos through Steam."
     },
     {
-      "name": "tv_broadcast1",
-      "defaultValue": false,
-      "flags": ["release"],
-      "description": "Automatically broadcasts all games as GOTV[1] demos through Steam."
-    },
-    {
       "name": "tv_broadcast_keyframe_interval",
       "defaultValue": 3,
       "flags": ["release"],
@@ -15436,6 +15850,12 @@
       "defaultValue": "http://localhost:8080",
       "flags": ["release"],
       "description": "URL of the broadcast relay1"
+    },
+    {
+      "name": "tv_broadcast1",
+      "defaultValue": false,
+      "flags": ["release"],
+      "description": "Automatically broadcasts all games as GOTV[1] demos through Steam."
     },
     {
       "name": "tv_chatgroupsize",
@@ -15498,12 +15918,6 @@
       "description": "Activates SourceTV on server."
     },
     {
-      "name": "tv_enable1",
-      "defaultValue": false,
-      "flags": ["notify", "release"],
-      "description": "Activates SourceTV[1] on server."
-    },
-    {
       "name": "tv_enable_delta_frames",
       "defaultValue": true,
       "flags": ["release"],
@@ -15514,6 +15928,24 @@
       "defaultValue": false,
       "flags": ["notify", "release"],
       "description": "When enabled, changes in tv_enable convars cause immediate startup or shutdown of hltv server"
+    },
+    {
+      "name": "tv_enable1",
+      "defaultValue": false,
+      "flags": ["notify", "release"],
+      "description": "Activates SourceTV[1] on server."
+    },
+    {
+      "name": "tv_encryptdata_key",
+      "defaultValue": "",
+      "flags": ["release"],
+      "description": "When set to a valid key communication messages will be encrypted for GOTV"
+    },
+    {
+      "name": "tv_encryptdata_key_pub",
+      "defaultValue": "",
+      "flags": ["release"],
+      "description": "When set to a valid key public communication messages will be encrypted for GOTV"
     },
     {
       "name": "tv_include_usercommands",
@@ -15654,6 +16086,12 @@
       "description": "Relay team radio commands to TV: 0=off, 1=on"
     },
     {
+      "name": "tv_relaytextchat",
+      "defaultValue": 1,
+      "flags": ["sv", "release"],
+      "description": "Relay text chat data to GOTV: 0=off, 1=say, 2=say+say_team"
+    },
+    {
       "name": "tv_relayvoice",
       "defaultValue": true,
       "flags": ["release"],
@@ -15718,6 +16156,12 @@
       "defaultValue": false,
       "flags": ["rep", "release"],
       "description": "Transmit all entities (not only director view)"
+    },
+    {
+      "name": "tv_window_size",
+      "defaultValue": 16,
+      "flags": ["release"],
+      "description": "Specifies the number of seconds worth of frames that the tv replay system should keep in memory. Increasing this greatly increases the amount of memory consumed by the TV system"
     },
     {
       "name": "ui_deepstats_radio_heat_figurine",
@@ -15840,6 +16284,12 @@
       "description": ""
     },
     {
+      "name": "ui_playsettings_flags_listen_rush",
+      "defaultValue": "0",
+      "flags": ["cl", "archive", "release"],
+      "description": ""
+    },
+    {
       "name": "ui_playsettings_flags_listen_scrimcomp2v2",
       "defaultValue": "0",
       "flags": ["cl", "a", "release"],
@@ -15885,6 +16335,12 @@
       "name": "ui_playsettings_flags_official_retakes",
       "defaultValue": "0",
       "flags": ["cl", "a", "release"],
+      "description": ""
+    },
+    {
+      "name": "ui_playsettings_flags_official_rush",
+      "defaultValue": "0",
+      "flags": ["cl", "archive", "release"],
       "description": ""
     },
     {
@@ -15960,6 +16416,12 @@
       "description": ""
     },
     {
+      "name": "ui_playsettings_maps_listen_rush",
+      "defaultValue": "mg_rush_001",
+      "flags": ["cl", "archive", "release"],
+      "description": ""
+    },
+    {
       "name": "ui_playsettings_maps_listen_scrimcomp2v2",
       "defaultValue": "mg_de_inferno",
       "flags": ["cl", "a", "release"],
@@ -15993,6 +16455,12 @@
       "name": "ui_playsettings_maps_official_retakes",
       "defaultValue": "mg_casualalpha",
       "flags": ["cl", "a", "release"],
+      "description": ""
+    },
+    {
+      "name": "ui_playsettings_maps_official_rush",
+      "defaultValue": "mg_rush_001",
+      "flags": ["cl", "archive", "release"],
       "description": ""
     },
     {
@@ -16300,6 +16768,48 @@
       "defaultValue": 0,
       "flags": ["cl", "a", "per_user"],
       "description": "Voice chat uses a vox-style always on"
+    },
+    {
+      "name": "voice_webrtc_aec",
+      "defaultValue": true,
+      "flags": ["archive"],
+      "description": "WebRTC: cancel game audio echoing from the speakers into the microphone (AEC3)."
+    },
+    {
+      "name": "voice_webrtc_agc",
+      "defaultValue": true,
+      "flags": ["archive"],
+      "description": "WebRTC: adaptive digital automatic gain control (AGC2)."
+    },
+    {
+      "name": "voice_webrtc_apm",
+      "defaultValue": false,
+      "flags": ["archive"],
+      "description": "Process in-process voice chat microphone audio with the WebRTC audio processing module (requires voice_in_process)."
+    },
+    {
+      "name": "voice_webrtc_fixed_gain_db",
+      "defaultValue": 0,
+      "flags": ["archive"],
+      "description": "WebRTC: fixed digital gain in dB applied to the microphone before the adaptive gain stage."
+    },
+    {
+      "name": "voice_webrtc_hpf",
+      "defaultValue": true,
+      "flags": ["archive"],
+      "description": "WebRTC: high-pass filter to remove DC offset and low rumble."
+    },
+    {
+      "name": "voice_webrtc_ns",
+      "defaultValue": true,
+      "flags": ["archive"],
+      "description": "WebRTC: noise suppression."
+    },
+    {
+      "name": "voice_webrtc_ns_level",
+      "defaultValue": 2,
+      "flags": ["archive"],
+      "description": "WebRTC: noise suppression aggressiveness, 0 (low) to 3 (very high)."
     },
     {
       "name": "volume",
