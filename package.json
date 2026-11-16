@@ -4,7 +4,7 @@
   "description": "Syntax highlighting & IntelliSense for CS2 .cfg files",
   "publisher": "mario-morales-ortega",
   "icon": "./icon.png",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "engines": {
     "vscode": "^1.74.0"
   },
