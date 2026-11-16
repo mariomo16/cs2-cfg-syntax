@@ -12,6 +12,25 @@ const commands = commandsJson.commands as CommandInfo[];
 const COMMANDS_MAP = new Map<string, vscode.MarkdownString>();
 const COMPLETION_ITEMS = buildCompletionItems();
 const KNOWN_COMMANDS = new Set(commands.map((cmd) => cmd.name));
+const ALIAS_DEFINITION_PATTERN =
+  /^\s*alias\s+(?:"([a-zA-Z0-9_+-]+)"|([a-zA-Z0-9_+-]+))\s+(?:"[^"]*"|\S+)/i;
+
+function collectAliasNames(lines: readonly string[]): Set<string> {
+  const aliases = new Set<string>();
+
+  for (const line of lines) {
+    const match = ALIAS_DEFINITION_PATTERN.exec(line);
+
+    if (!match) {
+      continue;
+    }
+
+    const aliasName = (match[1] ?? match[2]).toLowerCase();
+    aliases.add(aliasName);
+  }
+
+  return aliases;
+}
 
 function buildCommandMarkdown(cmd: CommandInfo): vscode.MarkdownString {
   const md = new vscode.MarkdownString();
@@ -52,6 +71,7 @@ function validateDocument(document: vscode.TextDocument): vscode.Diagnostic[] {
   const diagnostics: vscode.Diagnostic[] = [];
   const text = document.getText();
   const lines = text.split("\n");
+  const aliases = collectAliasNames(lines);
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
@@ -67,7 +87,10 @@ function validateDocument(document: vscode.TextDocument): vscode.Diagnostic[] {
 
     const firstToken = firstTokenMatch[1];
 
-    if (KNOWN_COMMANDS.has(firstToken)) {
+    if (
+      KNOWN_COMMANDS.has(firstToken) ||
+      aliases.has(firstToken.toLowerCase())
+    ) {
       continue;
     }
 
