@@ -47,7 +47,10 @@
   },
   "scripts": {
     "vscode:prepublish": "pnpm build",
-    "build": "tsc -p ./"
+    "build": "tsc -p ./",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc -p ./ --noEmit"
   },
   "repository": {
     "type": "git",
