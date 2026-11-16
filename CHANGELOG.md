@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Alias detection**: Aliases defined in the same file (e.g. `alias "cache" "map de_cache"`) are now recognized when used later in the config.
   - Alias usages no longer appear as "Unrecognized command or cvar" errors in the Problems panel.
+  - Hovering a defined alias shows the line where it is defined and the command(s) it executes.
 
 ## [1.6.1] - 2026-10-29
 
