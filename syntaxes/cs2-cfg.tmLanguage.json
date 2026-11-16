@@ -4,10 +4,10 @@
   "patterns": [
     { "include": "#comment" },
     { "include": "#string" },
+    { "include": "#binding" },
+    { "include": "#keybind" },
     { "include": "#command" },
     { "include": "#entity" },
-    { "include": "#keybind" },
-    { "include": "#binding" },
     { "include": "#network" },
     { "include": "#literal" },
     { "include": "#separator" }
