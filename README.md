@@ -12,8 +12,8 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 
 > Screenshots taken with Dark 2026 (built-in theme)
 
-| Without Extension | With Extension |
-| --- | --- |
+| Without Extension                                                                                                                             | With Extension                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![CS2 config file without syntax highlighting](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOff.png) | ![CS2 config file with syntax highlighting enabled](https://raw.githubusercontent.com/mariomo16/cs2-cfg-syntax/refs/heads/main/images/codeOn.png) |
 
 ## Features
