@@ -4,7 +4,8 @@
   "description": "Syntax highlighting & IntelliSense for CS2 .cfg files",
   "publisher": "mario-morales-ortega",
   "icon": "./icon.png",
-  "version": "1.6.1",
+  "version": "1.7.0",
+  "packageManager": "pnpm@12.21.0",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -47,7 +48,10 @@
   },
   "scripts": {
     "vscode:prepublish": "pnpm build",
-    "build": "tsc -p ./"
+    "build": "tsc -p ./",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc -p ./ --noEmit"
   },
   "repository": {
     "type": "git",
@@ -59,7 +63,7 @@
   "homepage": "https://github.com/mariomo16/cs2-cfg-syntax#readme",
   "license": "MIT",
   "devDependencies": {
-    "@biomejs/biome": "2.6.4",
+    "@biomejs/biome": "2.6.8",
     "@types/node": "24.19.2",
     "@types/vscode": "^1.74.0",
     "typescript": "7.0.2"

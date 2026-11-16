@@ -4,10 +4,10 @@
   "patterns": [
     { "include": "#comment" },
     { "include": "#string" },
+    { "include": "#binding" },
+    { "include": "#keybind" },
     { "include": "#command" },
     { "include": "#entity" },
-    { "include": "#keybind" },
-    { "include": "#binding" },
     { "include": "#network" },
     { "include": "#literal" },
     { "include": "#separator" }
@@ -60,13 +60,6 @@
         {
           "name": "support.function.cs2-cfg",
           "match": "\\b(?:ai_|ammo_|anim|anotation_|auto|bot_|buddha|buy|c_|cam_|camera_|cash_|cc_|cl_|clear|commentary|con|contributionscore_|cq_|crash_|cs_|csgo_|csm_|cv_|debug|demo|dis|dota_|draw|ds|dump|engine_|ent_|exec|explode|fade|ff_|find|fish_|fog_|fov_|fps_max|fs_|g_|game|get|give|glow_|heal|host|hud_|hurt|imgui_|inferno_|input_|invnext|invprev|joy_|key_|kick|labelled_debug_helper_|lb_|list|log|m_|map|markup_group_|mat_|mesh_calculate_curvature_smooth_|mm_|mobile_fps_|molotov_|movement_stats_|mp_|nav_|navspace_|net_|next|noclip|option_|panorama_|particle_|phys_|play|print_|prop_|pulse_|pvs_|pwatch|r_|radarvi|radio|ragdoll_|range|rcon|recast_|replay_|report_|reset_|retake_|rr_|safezone|save_|say|sc_|script_|sensitivity|set|shake_|shatterglass_|show|skeleton_instance_|slot|snd_|sound|spawn_|spec_|status|stop|surf|suspicious_hit_|sv_|switchhands|sys_|telemetry_|Test_|test_|thirdperson|time|toggle|tv_|ui_|view|violence_|vis|vmix_|voice_|volume|weapon_)[_a-zA-Z0-9]*\\b"
-        },
-        {
-          "name": "invalid.illegal.unknown-command.cs2-cfg",
-          "match": "^\\s*([a-zA-Z_][a-zA-Z0-9_+-]*)\\b",
-          "captures": {
-            "1": { "name": "invalid.illegal.unknown-command.cs2-cfg" }
-          }
         }
       ]
     },

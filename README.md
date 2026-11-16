@@ -5,6 +5,8 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 [![Version](https://vsmarketplacebadges.dev/version/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
 [![Installs](https://vsmarketplacebadges.dev/installs/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
 [![Rating](https://vsmarketplacebadges.dev/rating/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
+[![License](https://img.shields.io/github/license/mariomo16/cs2-cfg-syntax)](LICENSE)
+[![Build](https://github.com/mariomo16/cs2-cfg-syntax/actions/workflows/ci.yml/badge.svg)](https://github.com/mariomo16/cs2-cfg-syntax/actions/workflows/ci.yml)
 
 ## Preview
 
@@ -32,6 +34,8 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 - **Autocompletion**: All ConVars and Commands with type hints
 - **Hover information**: Displays command name, default value, flags, and description for any command
 - **Error reporting**: Unknown commands appear as red squiggly lines and in the Problems panel
+- **Alias detection**: Aliases defined in the same file (e.g. `alias "cache" "map de_cache"`) are recognized when used later
+- **Alias hover**: Hovering a defined alias shows where it is defined and what it executes
 
 ## Installation
 
