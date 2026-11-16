@@ -5,6 +5,8 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 [![Version](https://vsmarketplacebadges.dev/version/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
 [![Installs](https://vsmarketplacebadges.dev/installs/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
 [![Rating](https://vsmarketplacebadges.dev/rating/mario-morales-ortega.cs2-cfg-syntax.svg)](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax)
+[![License](https://img.shields.io/github/license/mariomo16/cs2-cfg-syntax)](LICENSE)
+[![Build](https://github.com/mariomo16/cs2-cfg-syntax/actions/workflows/ci.yml/badge.svg)](https://github.com/mariomo16/cs2-cfg-syntax/actions/workflows/ci.yml)
 
 ## Preview
 
