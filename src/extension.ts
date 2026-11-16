@@ -8,25 +8,37 @@ interface CommandInfo {
   description?: string;
 }
 
+interface AliasInfo {
+  name: string;
+  action: string;
+  line: number;
+}
+
 const commands = commandsJson.commands as CommandInfo[];
 const COMMANDS_MAP = new Map<string, vscode.MarkdownString>();
 const COMPLETION_ITEMS = buildCompletionItems();
 const KNOWN_COMMANDS = new Set(commands.map((cmd) => cmd.name));
 const ALIAS_DEFINITION_PATTERN =
-  /^\s*alias\s+(?:"([a-zA-Z0-9_+-]+)"|([a-zA-Z0-9_+-]+))\s+(?:"[^"]*"|\S+)/i;
+  /^\s*alias\s+(?:"([a-zA-Z0-9_+-]+)"|([a-zA-Z0-9_+-]+))\s+(?:"([^"]*)"|(\S+))/i;
 
-function collectAliasNames(lines: readonly string[]): Set<string> {
-  const aliases = new Set<string>();
+function collectAliases(lines: readonly string[]): Map<string, AliasInfo> {
+  const aliases = new Map<string, AliasInfo>();
 
-  for (const line of lines) {
-    const match = ALIAS_DEFINITION_PATTERN.exec(line);
+  for (let i = 0; i < lines.length; i++) {
+    const match = ALIAS_DEFINITION_PATTERN.exec(lines[i]);
 
     if (!match) {
       continue;
     }
 
-    const aliasName = (match[1] ?? match[2]).toLowerCase();
-    aliases.add(aliasName);
+    const aliasName = match[1] ?? match[2];
+    const action = match[3] ?? match[4] ?? "";
+
+    aliases.set(aliasName.toLowerCase(), {
+      name: aliasName,
+      action,
+      line: i,
+    });
   }
 
   return aliases;
@@ -44,6 +56,15 @@ function buildCommandMarkdown(cmd: CommandInfo): vscode.MarkdownString {
   if (cmd.flags?.length) {
     md.appendMarkdown(`**Flags:** \`${cmd.flags.join(", ")}\``);
   }
+
+  return md;
+}
+
+function buildAliasMarkdown(alias: AliasInfo): vscode.MarkdownString {
+  const md = new vscode.MarkdownString();
+  md.appendMarkdown(`**${alias.name}**\n\n`);
+  md.appendMarkdown(`Defined at line ${alias.line + 1}\n\n`);
+  md.appendCodeblock(alias.action, "cfg");
 
   return md;
 }
@@ -71,7 +92,7 @@ function validateDocument(document: vscode.TextDocument): vscode.Diagnostic[] {
   const diagnostics: vscode.Diagnostic[] = [];
   const text = document.getText();
   const lines = text.split("\n");
-  const aliases = collectAliasNames(lines);
+  const aliases = collectAliases(lines);
 
   for (let i = 0; i < lines.length; i++) {
     const rawLine = lines[i];
@@ -129,10 +150,19 @@ export function activate(context: vscode.ExtensionContext): void {
       document: vscode.TextDocument,
       position: vscode.Position,
     ): vscode.Hover | null {
-      const range = document.getWordRangeAtPosition(position, /[\w_]+/);
+      const range = document.getWordRangeAtPosition(position, /[+-]?[\w-]+/);
       if (!range) return null;
 
-      const md = COMMANDS_MAP.get(document.getText(range));
+      const word = document.getText(range);
+      const alias = collectAliases(document.getText().split("\n")).get(
+        word.toLowerCase(),
+      );
+
+      if (alias) {
+        return new vscode.Hover(buildAliasMarkdown(alias), range);
+      }
+
+      const md = COMMANDS_MAP.get(word);
       if (!md) return null;
 
       return new vscode.Hover(md, range);
