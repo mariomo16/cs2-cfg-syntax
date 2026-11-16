@@ -5,6 +5,7 @@
   "publisher": "mario-morales-ortega",
   "icon": "./icon.png",
   "version": "1.7.0",
+  "packageManager": "pnpm@12.21.0",
   "engines": {
     "vscode": "^1.74.0"
   },
