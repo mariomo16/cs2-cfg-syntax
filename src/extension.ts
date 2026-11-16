@@ -64,7 +64,7 @@ function buildAliasMarkdown(alias: AliasInfo): vscode.MarkdownString {
   const md = new vscode.MarkdownString();
   md.appendMarkdown(`**${alias.name}**\n\n`);
   md.appendMarkdown(`Defined at line ${alias.line + 1}\n\n`);
-  md.appendCodeblock(alias.action, "cfg");
+  md.appendCodeblock(alias.action, "cs2-cfg");
 
   return md;
 }
