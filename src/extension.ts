@@ -74,7 +74,8 @@ function validateDocument(document: vscode.TextDocument): vscode.Diagnostic[] {
   const aliases = collectAliasNames(lines);
 
   for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
+    const rawLine = lines[i];
+    const line = rawLine.trim();
 
     if (!line || line.startsWith("//")) {
       continue;
@@ -94,7 +95,13 @@ function validateDocument(document: vscode.TextDocument): vscode.Diagnostic[] {
       continue;
     }
 
-    const range = new vscode.Range(i, 0, i, firstToken.length);
+    const tokenStart = rawLine.indexOf(firstToken);
+    const range = new vscode.Range(
+      i,
+      tokenStart,
+      i,
+      tokenStart + firstToken.length,
+    );
     const diagnostic = new vscode.Diagnostic(
       range,
       `Unrecognized command or cvar: ${firstToken}`,
@@ -136,9 +143,11 @@ export function activate(context: vscode.ExtensionContext): void {
     vscode.languages.createDiagnosticCollection("cs2-cfg");
 
   const updateDiagnostics = (document: vscode.TextDocument) => {
-    if (document.languageId === "cs2-cfg") {
-      diagnosticCollection.set(document.uri, validateDocument(document));
+    if (document.languageId !== "cs2-cfg") {
+      return;
     }
+
+    diagnosticCollection.set(document.uri, validateDocument(document));
   };
 
   const onDidChangeTextDocument = vscode.workspace.onDidChangeTextDocument(
