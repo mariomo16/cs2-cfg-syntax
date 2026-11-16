@@ -14,24 +14,36 @@ interface AliasInfo {
   line: number;
 }
 
+interface DocumentCacheEntry {
+  version: number;
+  lines: string[];
+  aliases: Map<string, AliasInfo>;
+}
+
 const commands = commandsJson.commands as CommandInfo[];
 const COMMANDS_MAP = new Map<string, vscode.MarkdownString>();
+const KNOWN_COMMANDS = new Set(commands.map((cmd) => cmd.name.toLowerCase()));
 const COMPLETION_ITEMS = buildCompletionItems();
-const KNOWN_COMMANDS = new Set(commands.map((cmd) => cmd.name));
 const ALIAS_DEFINITION_PATTERN =
   /^\s*alias\s+(?:"([a-zA-Z0-9_+-]+)"|([a-zA-Z0-9_+-]+))\s+(?:"([^"]*)"|(\S+))/i;
+const aliasCache = new Map<string, DocumentCacheEntry>();
 
 function collectAliases(lines: readonly string[]): Map<string, AliasInfo> {
   const aliases = new Map<string, AliasInfo>();
 
-  for (let i = 0; i < lines.length; i++) {
-    const match = ALIAS_DEFINITION_PATTERN.exec(lines[i]);
+  for (const [i, line] of lines.entries()) {
+    const match = ALIAS_DEFINITION_PATTERN.exec(line);
 
     if (!match) {
       continue;
     }
 
     const aliasName = match[1] ?? match[2];
+
+    if (!aliasName) {
+      continue;
+    }
+
     const action = match[3] ?? match[4] ?? "";
 
     aliases.set(aliasName.toLowerCase(), {
@@ -42,6 +54,25 @@ function collectAliases(lines: readonly string[]): Map<string, AliasInfo> {
   }
 
   return aliases;
+}
+
+function getDocumentCache(document: vscode.TextDocument): DocumentCacheEntry {
+  const key = document.uri.toString();
+  const cached = aliasCache.get(key);
+
+  if (cached?.version === document.version) {
+    return cached;
+  }
+
+  const lines = document.getText().split("\n");
+  const entry: DocumentCacheEntry = {
+    version: document.version,
+    lines,
+    aliases: collectAliases(lines),
+  };
+  aliasCache.set(key, entry);
+
+  return entry;
 }
 
 function buildCommandMarkdown(cmd: CommandInfo): vscode.MarkdownString {
@@ -70,7 +101,7 @@ function buildAliasMarkdown(alias: AliasInfo): vscode.MarkdownString {
 }
 
 function buildCompletionItems(): vscode.CompletionItem[] {
-  return commands.map((cmd) => {
+  const items = commands.map((cmd) => {
     const isConCommand = cmd.defaultValue === "cmd";
     const item = new vscode.CompletionItem(
       cmd.name,
@@ -81,21 +112,20 @@ function buildCompletionItems(): vscode.CompletionItem[] {
     item.detail = isConCommand ? "Command" : "Console Variable";
 
     const md = buildCommandMarkdown(cmd);
-    COMMANDS_MAP.set(cmd.name, md);
+    COMMANDS_MAP.set(cmd.name.toLowerCase(), md);
     item.documentation = md;
 
     return item;
   });
+
+  return items;
 }
 
 function validateDocument(document: vscode.TextDocument): vscode.Diagnostic[] {
   const diagnostics: vscode.Diagnostic[] = [];
-  const text = document.getText();
-  const lines = text.split("\n");
-  const aliases = collectAliases(lines);
+  const { lines, aliases } = getDocumentCache(document);
 
-  for (let i = 0; i < lines.length; i++) {
-    const rawLine = lines[i];
+  for (const [i, rawLine] of lines.entries()) {
     const line = rawLine.trim();
 
     if (!line || line.startsWith("//")) {
@@ -109,10 +139,13 @@ function validateDocument(document: vscode.TextDocument): vscode.Diagnostic[] {
 
     const firstToken = firstTokenMatch[1];
 
-    if (
-      KNOWN_COMMANDS.has(firstToken) ||
-      aliases.has(firstToken.toLowerCase())
-    ) {
+    if (!firstToken) {
+      continue;
+    }
+
+    const normalizedToken = firstToken.toLowerCase();
+
+    if (KNOWN_COMMANDS.has(normalizedToken) || aliases.has(normalizedToken)) {
       continue;
     }
 
@@ -129,6 +162,7 @@ function validateDocument(document: vscode.TextDocument): vscode.Diagnostic[] {
       vscode.DiagnosticSeverity.Error,
     );
     diagnostic.source = "cs2-cfg";
+    diagnostic.code = "unknown-command";
     diagnostics.push(diagnostic);
   }
 
@@ -154,15 +188,14 @@ export function activate(context: vscode.ExtensionContext): void {
       if (!range) return null;
 
       const word = document.getText(range);
-      const alias = collectAliases(document.getText().split("\n")).get(
-        word.toLowerCase(),
-      );
+      const normalizedWord = word.toLowerCase();
+      const alias = getDocumentCache(document).aliases.get(normalizedWord);
 
       if (alias) {
         return new vscode.Hover(buildAliasMarkdown(alias), range);
       }
 
-      const md = COMMANDS_MAP.get(word);
+      const md = COMMANDS_MAP.get(normalizedWord);
       if (!md) return null;
 
       return new vscode.Hover(md, range);
@@ -190,6 +223,10 @@ export function activate(context: vscode.ExtensionContext): void {
   const onDidSaveTextDocument =
     vscode.workspace.onDidSaveTextDocument(updateDiagnostics);
 
+  const onDidCloseTextDocument = vscode.workspace.onDidCloseTextDocument(
+    (document) => aliasCache.delete(document.uri.toString()),
+  );
+
   vscode.workspace.textDocuments.forEach(updateDiagnostics);
 
   context.subscriptions.push(
@@ -199,5 +236,6 @@ export function activate(context: vscode.ExtensionContext): void {
     onDidChangeTextDocument,
     onDidOpenTextDocument,
     onDidSaveTextDocument,
+    onDidCloseTextDocument,
   );
 }
