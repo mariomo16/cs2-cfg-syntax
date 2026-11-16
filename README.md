@@ -32,6 +32,7 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 - **Autocompletion**: All ConVars and Commands with type hints
 - **Hover information**: Displays command name, default value, flags, and description for any command
 - **Error reporting**: Unknown commands appear as red squiggly lines and in the Problems panel
+- **Alias detection**: Aliases defined in the same file (e.g. `alias "cache" "map de_cache"`) are recognized when used later
 
 ## Installation
 
