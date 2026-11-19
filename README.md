@@ -23,7 +23,7 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 - **ConVars & Commands**: All current console commands and variables (e.g., `sensitivity`)
 - **Aliases**: Custom alias definitions with highlighted names
 - **Keybinds**: All keys, mouse buttons, and scancodes
-- **Maps & Weapons**: Map names (`de_cache`, `cs_italy`) and weapon identifiers
+- **Maps & Weapons**: Map names (`de_cbble`, `cs_italy`) and weapon identifiers
 - **Network**: IPv4 addresses and hostnames with ports
 - **Values**: Numbers, booleans, and strings
 - **Comments**: Line comments starting with `//`
@@ -34,12 +34,12 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 - **Autocompletion**: All ConVars and Commands with type hints
 - **Hover information**: Displays command name, default value, flags, and description for any command
 - **Error reporting**: Unknown commands appear as red squiggly lines and in the Problems panel
-- **Alias detection**: Aliases defined in the same file (e.g. `alias "cache" "map de_cache"`) are recognized when used later
+- **Alias detection**: Aliases defined in the same file (e.g. `alias "cbble" "map de_cbble"`) are recognized
 - **Alias hover**: Hovering a defined alias shows where it is defined and what it executes
 
 ## Installation
 
-Search **CS2 Config Support** in the VS Code Extensions panel (`Ctrl+Shift+X`) or install directly from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax).
+Search **CS2 Config Support** in the VS Code Extensions panel or install directly from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax).
 
 ## Setup
 
