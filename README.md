@@ -37,6 +37,17 @@ Syntax highlighting and IntelliSense for Counter-Strike 2 `.cfg` files. Recogniz
 - **Alias detection**: Aliases defined in the same file (e.g. `alias "cbble" "map de_cbble"`) are recognized
 - **Alias hover**: Hovering a defined alias shows where it is defined and what it executes
 
+### Code Folding
+
+Organize long configs with comment-based regions. Nested regions are supported.
+
+```sh
+// #region Example region
+bind "MWHEELUP" "+jump"
+bind "CTRL" "+duck"
+// #endregion
+```
+
 ## Installation
 
 Search **CS2 Config Support** in the VS Code Extensions panel or install directly from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax).
